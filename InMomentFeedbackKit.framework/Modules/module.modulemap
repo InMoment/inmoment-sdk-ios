@@ -1,0 +1,10 @@
+framework module InMomentFeedbackKit {
+  umbrella header "InMomentFeedbackKit.h"
+
+  export *
+  module * { export * }
+}
+
+module InMomentFeedbackKit.Swift {
+    header "InMomentFeedbackKit-Swift.h"
+}
