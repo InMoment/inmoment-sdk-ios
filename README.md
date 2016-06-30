@@ -1,1 +1,3 @@
 # inmoment-sdk
+
+${VERSION}
