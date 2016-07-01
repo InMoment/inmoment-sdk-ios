@@ -18,11 +18,39 @@ Coming soon...
 1. [Download](../../releases/latest) the latest release and unzip it.
 2. Drag ```InMomentFeedbackKit.framework``` into your Xcode project and choose "Copy if needed".
 3. Click the ```+``` in the ```Embedded Binaries``` section of your application's target, and select ```InMomentFeedbackKit.framework```.
-3. Copy and paste the following script as an Archive post-action [(here's why)]():
+3. Add a Run Script build phase after "Embed Frameworks". Copy and paste the following script [(here's why)](http://ikennd.ac/blog/2015/02/stripping-unwanted-architectures-from-dynamic-libraries-in-xcode/):
 
     ```bash
-    Coming soon...
+    APP_PATH="${TARGET_BUILD_DIR}/${WRAPPER_NAME}"
+
+    # This script loops through the frameworks embedded in the application and
+    # removes unused architectures.
+    find "$APP_PATH" -name '*.framework' -type d | while read -r FRAMEWORK
+    do
+        FRAMEWORK_EXECUTABLE_NAME=$(defaults read "$FRAMEWORK/Info.plist" CFBundleExecutable)
+        FRAMEWORK_EXECUTABLE_PATH="$FRAMEWORK/$FRAMEWORK_EXECUTABLE_NAME"
+        echo "Executable is $FRAMEWORK_EXECUTABLE_PATH"
+    
+        EXTRACTED_ARCHS=()
+    
+        for ARCH in $ARCHS
+        do
+            echo "Extracting $ARCH from $FRAMEWORK_EXECUTABLE_NAME"
+            lipo -extract "$ARCH" "$FRAMEWORK_EXECUTABLE_PATH" -o "$FRAMEWORK_EXECUTABLE_PATH-$ARCH"
+            EXTRACTED_ARCHS+=("$FRAMEWORK_EXECUTABLE_PATH-$ARCH")
+        done
+    
+        echo "Merging extracted architectures: ${ARCHS}"
+        lipo -o "$FRAMEWORK_EXECUTABLE_PATH-merged" -create "${EXTRACTED_ARCHS[@]}"
+        rm "${EXTRACTED_ARCHS[@]}"
+    
+        echo "Replacing original executable with thinned version"
+        rm "$FRAMEWORK_EXECUTABLE_PATH"
+        mv "$FRAMEWORK_EXECUTABLE_PATH-merged" "$FRAMEWORK_EXECUTABLE_PATH"
+    
+    done
     ```
+    Credit: Daniel Kennett
     
 4. Add the following entries to your application's ```Info.plist```:
 
