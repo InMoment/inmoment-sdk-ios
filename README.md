@@ -11,7 +11,7 @@
 
 ### Installation via CocoaPods (Recommended)
 
-Coming soon
+Coming soon...
 
 ### Manual Installation (Discouraged)
 
@@ -21,6 +21,12 @@ Coming soon
 3. Copy and paste the following script as an Archive post-action [(here's why)]():
 
     ```bash
+    Coming soon...
+    ```
+    
+4. Add the following entries to your application's ```Info.plist```:
+
+    ```xml
     Coming soon...
     ```
 
@@ -52,15 +58,19 @@ Coming soon
     }
    ```
 
-3. Present the survey:
+3. Present the survey using the URL provided to you by InMoment. Pass in an instance of ```IMSurveyViewDelegate```, (in this case ```self```), for the parameter ```delegate```:
 
     ```swift
     InMoment.presentSurveyModally("https://www.inmoment.com/foo", delegate: self)
     ```
+    
+NOTE: This will only work for an InMoment survey. An error will occur if any other URL is given.
 
 ## Advanced Usage
 
 The ```IMSurveyViewDelegate``` protocol provides some additional, optional methods for interacting with surveys:
+
+#### Recording survey completion
 
 ```swift
 func surveyView(didPassCompletionPointInSurvey survey: IMSurveyViewController) {
@@ -68,7 +78,9 @@ func surveyView(didPassCompletionPointInSurvey survey: IMSurveyViewController) {
 }
 ```
   
-This method is called when the user arrives at the page immediately following the survey completion point. Once the user reaches this point the survey response will be available on InMoment reports and in Focus(tm). Use this method to perform actions such as recording that the user has taken the survey or giving the user a reward.
+This method is called when the user arrives at the page immediately following the survey completion point. Once this happens, the survey response will be available on InMoment reports and in Focus(tm), (even if the user doesn't continue until the very last page of the survey). Use this method to perform actions such as recording that the user has finished taking the survey and giving the user a reward.
+
+#### Recording Next/Previous page button taps (experimental)
 
 ```swift
 func surveyView(didClickPreviousPageButtonInSurvey survey: IMSurveyViewController) {
@@ -80,4 +92,4 @@ func surveyView(didClickNextPageButtonInSurvey survey: IMSurveyViewController) {
 }
 ```
 
-These methods are called immediately when the user taps the "next" or "previous" page buttons in the survey, respectively.
+These methods are called immediately when the user taps the "next" or "previous" page buttons in the survey. These methods can be used to monitor that the user is "still there" or performing other actions. These methods are experimental, and may be deprecated or removed in future versions.
