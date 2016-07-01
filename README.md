@@ -32,13 +32,13 @@ Coming soon...
 
 ## Basic Usage
 
-1. Import the framework:
+1. **Import** the framework:
 
     ```swift
     import InmomentFeedbackKit
     ```
 
-2. Implement the ```IMSurveyViewDelegate``` protocol:
+2. **Implement** the ```IMSurveyViewDelegate``` protocol:
 
     ```swift
     class ViewController: UIViewController, IMSurveyViewDelegate {
@@ -58,13 +58,13 @@ Coming soon...
     }
    ```
 
-3. Present the survey using the URL provided to you by InMoment. Pass in an instance of ```IMSurveyViewDelegate```, (in this case ```self```), for the parameter ```delegate```:
+3. **Present** the survey using the URL provided to you by InMoment. Pass in an instance of ```IMSurveyViewDelegate```, (in this case ```self```), for the parameter ```delegate```:
 
     ```swift
     InMoment.presentSurveyModally("https://www.inmoment.com/foo", delegate: self)
     ```
     
-NOTE: This will only work for an InMoment survey. An error will occur if any other URL is given.
+    NOTE: This will only work for an InMoment survey. An error will occur if any other URL is given.
 
 ## Advanced Usage
 
