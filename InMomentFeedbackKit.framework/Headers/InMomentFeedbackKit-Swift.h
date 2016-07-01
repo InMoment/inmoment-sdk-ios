@@ -112,15 +112,16 @@ SWIFT_CLASS("_TtC19InMomentFeedbackKit19IMWebViewController")
 - (void)dismissViewControllerAnimated:(BOOL)flag completion:(void (^ _Nullable)(void))completion;
 @end
 
-@protocol IMSurveyViewControllerDelegate;
+@protocol IMSurveyViewDelegate;
 
 SWIFT_CLASS("_TtC19InMomentFeedbackKit22IMSurveyViewController")
 @interface IMSurveyViewController : IMWebViewController
-@property (nonatomic, strong) id <IMSurveyViewControllerDelegate> _Nullable delegate;
+@property (nonatomic, strong) id <IMSurveyViewDelegate> _Nullable delegate;
 @property (nonatomic, copy) NSString * _Nullable surveyURL;
-- (nonnull instancetype)initWithSurveyURL:(NSString * _Nonnull)surveyURL delegate:(id <IMSurveyViewControllerDelegate> _Nullable)delegate OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initWithSurveyURL:(NSString * _Nonnull)surveyURL delegate:(id <IMSurveyViewDelegate> _Nonnull)delegate OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 - (void)viewDidAppear:(BOOL)animated;
+- (void)dismiss;
 - (void)reloadSurvey;
 @end
 
@@ -140,15 +141,15 @@ SWIFT_CLASS("_TtC19InMomentFeedbackKit22IMSurveyViewController")
 @end
 
 
-SWIFT_PROTOCOL("_TtP19InMomentFeedbackKit30IMSurveyViewControllerDelegate_")
-@protocol IMSurveyViewControllerDelegate
+SWIFT_PROTOCOL("_TtP19InMomentFeedbackKit20IMSurveyViewDelegate_")
+@protocol IMSurveyViewDelegate
 @optional
-- (void)surveyViewWithDidPassCompletionPointInSurvey:(IMSurveyViewController * _Nonnull)surveyViewController;
-- (void)surveyViewWithDidArriveAtLastPageOfSurvey:(IMSurveyViewController * _Nonnull)surveyViewController;
-- (void)surveyViewWithDidClickNextPageButtonInSurvey:(IMSurveyViewController * _Nonnull)surveyViewController;
-- (void)surveyViewWithDidClickPreviousPageButtonInSurvey:(IMSurveyViewController * _Nonnull)surveyViewController;
+- (void)surveyViewWithDidClickPreviousPageButtonInSurvey:(IMSurveyViewController * _Nonnull)survey;
+- (void)surveyViewWithDidClickNextPageButtonInSurvey:(IMSurveyViewController * _Nonnull)survey;
+- (void)surveyViewWithDidPassCompletionPointInSurvey:(IMSurveyViewController * _Nonnull)survey;
 @required
-- (void)surveyViewWithDidRecieveErrorLoadingSurvey:(NSError * _Nonnull)error surveyViewController:(IMSurveyViewController * _Nonnull)surveyViewController;
+- (void)surveyViewWithDidRecieveErrorLoadingSurvey:(IMSurveyViewController * _Nonnull)survey error:(NSError * _Nonnull)error;
+- (void)surveyViewWithDidArriveAtLastPageOfSurvey:(IMSurveyViewController * _Nonnull)survey;
 @end
 
 

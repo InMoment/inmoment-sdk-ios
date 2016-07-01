@@ -6,11 +6,11 @@
 	<dict>
 		<key>Assets.car</key>
 		<data>
-		5xyjS8limlfHdtcF1LmNWLDJ8bg=
+		Uin6KcLV0gZR7BdUu2lKO9ZuQi4=
 		</data>
 		<key>Headers/InMomentFeedbackKit-Swift.h</key>
 		<data>
-		ShbvdaVxI5Z/TAwfhioDZmewJo8=
+		PmWr5jb9mbhTNFi3lS03o+QDLOo=
 		</data>
 		<key>Headers/InMomentFeedbackKit.h</key>
 		<data>
@@ -30,7 +30,7 @@
 		</data>
 		<key>Modules/InMomentFeedbackKit.swiftmodule/arm.swiftmodule</key>
 		<data>
-		x5b0IQ3XZMzbYyxOM07GYpoZAJM=
+		qGXb4KSaJnjN8QyBu4oFRp+SPvI=
 		</data>
 		<key>Modules/InMomentFeedbackKit.swiftmodule/arm64.swiftdoc</key>
 		<data>
@@ -38,7 +38,7 @@
 		</data>
 		<key>Modules/InMomentFeedbackKit.swiftmodule/arm64.swiftmodule</key>
 		<data>
-		Va1FmvO/iC/JverW2YiZt94EqHY=
+		w+dLZ/7pH9gDQF6WQPv3nl+cIh8=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -51,22 +51,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			5xyjS8limlfHdtcF1LmNWLDJ8bg=
+			Uin6KcLV0gZR7BdUu2lKO9ZuQi4=
 			</data>
 			<key>hash2</key>
 			<data>
-			WBHewxMA0bAkhROTa4QwGmL5XzC3z1tiv4cB/WFmF70=
+			MItZzf4K820exh/KgiFWrbMBBP3qdJ6/0anQyPHgEeE=
 			</data>
 		</dict>
 		<key>Headers/InMomentFeedbackKit-Swift.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			ShbvdaVxI5Z/TAwfhioDZmewJo8=
+			PmWr5jb9mbhTNFi3lS03o+QDLOo=
 			</data>
 			<key>hash2</key>
 			<data>
-			M+dXyC7g3mN7a7rWwzI4Ix46nwHSxdBja298SrP7178=
+			uybcj1FSQhbKW6Jdlmlx+rGGTgOdxSZwdjhChdWzEIo=
 			</data>
 		</dict>
 		<key>Headers/InMomentFeedbackKit.h</key>
@@ -106,11 +106,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			x5b0IQ3XZMzbYyxOM07GYpoZAJM=
+			qGXb4KSaJnjN8QyBu4oFRp+SPvI=
 			</data>
 			<key>hash2</key>
 			<data>
-			PvXC+9K9SgTkQ0m++5vvpKGeh2rfgNUMsAQDNjlFwYU=
+			ye4GtED7ON+Jhj31OG34tvgR6N5lD6rzsJV+6xfiZig=
 			</data>
 		</dict>
 		<key>Modules/InMomentFeedbackKit.swiftmodule/arm64.swiftdoc</key>
@@ -128,11 +128,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			Va1FmvO/iC/JverW2YiZt94EqHY=
+			w+dLZ/7pH9gDQF6WQPv3nl+cIh8=
 			</data>
 			<key>hash2</key>
 			<data>
-			PnnlgsI3+Ws6UCkbtXmmdhdh85fJiCRSiGJQEp6Iuf4=
+			++GKOX400a87VjH8S/pSLUk3mxdVNdwhkTxej4DChvU=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
