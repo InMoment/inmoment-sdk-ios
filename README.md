@@ -78,7 +78,7 @@ func surveyView(didPassCompletionPointInSurvey survey: IMSurveyViewController) {
 }
 ```
   
-This method is called when the user arrives at the page immediately following the survey completion point. Once this happens, the survey response will be available on InMoment reports and in Focus(tm), (even if the user doesn't continue until the very last page of the survey). Use this method to perform actions such as recording that the user has finished taking the survey and giving the user a reward.
+This method is called when the user arrives at the page immediately following the survey completion point. Once this happens, the survey response will be available on InMoment reports and in Focus™, (even if the user doesn't continue until the very last page of the survey). Use this method to perform actions such as recording that the user has finished taking the survey and giving the user a reward.
 
 #### Recording Next/Previous page button taps (experimental)
 
