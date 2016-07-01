@@ -1,3 +1,11 @@
-# inmoment-sdk
+# InMomentFeedbackKit (iOS)
 
-${VERSION}
+## Installation
+
+### Installation via CocoaPods (Recommended)
+
+Coming soon
+
+### Installation without CocoaPods (Discouraged)
+
+[Download](/releases/latest) the latest release.
