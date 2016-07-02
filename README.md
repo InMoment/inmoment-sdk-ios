@@ -59,40 +59,34 @@ Coming soon...
     ```
 
 ## Basic Usage
-
-1. **Import** the framework:
-
-    ```swift
-    import InmomentFeedbackKit
-    ```
-
-2. **Implement** the ```IMSurveyViewDelegate``` protocol:
-
-    ```swift
-    class ViewController: UIViewController, IMSurveyViewDelegate {
-      
-      //This method is required
-      func surveyView(didRecieveErrorLoadingSurvey survey: IMSurveyViewController, error: NSError) {
-        //Insert your own code here, such as presenting an alert or logging the error
-        survey.dismiss()
-      }
-      
-      //This method is required
-      func surveyView(didArriveAtLastPageOfSurvey survey: IMSurveyViewController) {
-        //Insert your own code here
-        survey.dismiss()
-      }
-      
-    }
-   ```
-
-3. **Present** the survey using the URL provided to you by InMoment. Pass in an instance of ```IMSurveyViewDelegate```, (in this case ```self```), for the parameter ```delegate```:
-
-    ```swift
-    InMoment.presentSurveyModally("https://www.inmoment.com/foo", delegate: self)
-    ```
     
-    NOTE: This will only work for an InMoment survey. An error will occur if any other URL is given.
+```swift
+import InmomentFeedbackKit
+```
+    
+```swift
+class ViewController: UIViewController, IMSurveyViewDelegate {
+  
+  //This method is required
+  func surveyView(didRecieveErrorLoadingSurvey survey: IMSurveyViewController, error: NSError) {
+    //Insert your own code here, such as presenting an alert or logging the error
+    survey.dismiss()
+  }
+  
+  //This method is required
+  func surveyView(didArriveAtLastPageOfSurvey survey: IMSurveyViewController) {
+    //Insert your own code here
+    survey.dismiss()
+  }
+  
+}
+```
+
+```swift
+InMoment.presentSurveyModally("https://www.inmoment.com/foo", delegate: self)
+```
+
+NOTE: This will only work for an InMoment survey. An error will occur if any other URL is given.
 
 ## Advanced Usage
 
