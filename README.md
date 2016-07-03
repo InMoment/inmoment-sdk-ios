@@ -80,22 +80,23 @@ import InmomentFeedbackKit
     
 ```swift
 class ViewController: UIViewController, IMSurveyViewDelegate {
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        InMoment.presentSurveyModally("https://www.inmoment.com/foo", delegate: self)
+    }
+    
+    func surveyView(didRecieveErrorLoadingSurvey survey: IMSurveyViewController, error: NSError) {
+        //Insert your own code here. This method is required.
+        survey.dismiss()
+    }
   
-  func surveyView(didRecieveErrorLoadingSurvey survey: IMSurveyViewController, error: NSError) {
-    //Insert your own code here. This method is required.
-    survey.dismiss()
-  }
-  
-  func surveyView(didArriveAtLastPageOfSurvey survey: IMSurveyViewController) {
-    //Insert your own code here. This method is required.
-    survey.dismiss()
-  }
+    func surveyView(didArriveAtLastPageOfSurvey survey: IMSurveyViewController) {
+        //Insert your own code here. This method is required.
+        survey.dismiss()
+    }
   
 }
-```
-
-```swift
-InMoment.presentSurveyModally("https://www.inmoment.com/foo", delegate: self)
 ```
 
 NOTE: This will only work for an InMoment survey. An error will occur if any other URL is given.
