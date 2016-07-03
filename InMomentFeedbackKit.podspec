@@ -15,9 +15,9 @@ Pod::Spec.new do |s|
     #  summary should be tweet-length, and the description more in depth.
     #
     
-    s.name         = "InMomentFeedbackKit"
+    s.name         = "InMomentFeedbackKit (iOS)"
     s.version      = "1.0.0-beta"#<<<AUTOVERSION
-    s.summary      = "A short description of InMomentFeedbackKit."
+    s.summary      = "Lauch InMoment surveys from within an app."
     
     # This description is used to generate tags and improve search results.
     #   * Think: What does it do? Why did you write it? What is the focus?
@@ -29,7 +29,7 @@ Pod::Spec.new do |s|
     client apps. NOTE: This software is still in beta. Use at your own risk.
     DESC
     
-    s.homepage     = "http://www.inmoment.com"
+    s.homepage     = "https://github.com/InMoment/inmoment-sdk.git"
     # s.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
     
     
