@@ -15,7 +15,7 @@ Pod::Spec.new do |s|
     #  summary should be tweet-length, and the description more in depth.
     #
     
-    s.name         = "InMomentFeedbackKit (iOS)"
+    s.name         = "InMomentFeedbackKit"
     s.version      = "1.0.0-beta"#<<<AUTOVERSION
     s.summary      = "Lauch InMoment surveys from within an app."
     
@@ -40,7 +40,7 @@ Pod::Spec.new do |s|
     #  Popular ones are 'MIT', 'BSD' and 'Apache License, Version 2.0'.
     #
     
-    s.license      = { :type => "Apache License, Version 2.0", :file => "LICENSE" }
+    s.license      = "Apache License, Version 2.0"
     
     
     # ――― Author Metadata  ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
