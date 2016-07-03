@@ -15,7 +15,7 @@ Coming soon...
 
 ### Manual Installation (Discouraged)
 
-1. [Download](../../releases/latest) the latest release and unzip it.
+1. [Download](../../releases/latest) and unzip the latest release.
 2. Drag ```InMomentFeedbackKit.framework``` into your Xcode project and choose "Copy if needed".
 3. Click the ```+``` in the ```Embedded Binaries``` section of your application's target, and select ```InMomentFeedbackKit.framework```.
 3. Add a Run Script build phase after "Embed Frameworks". Copy and paste the following script:
@@ -80,22 +80,23 @@ import InmomentFeedbackKit
     
 ```swift
 class ViewController: UIViewController, IMSurveyViewDelegate {
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        InMoment.presentSurveyModally("https://www.inmoment.com/foo", delegate: self)
+    }
+    
+    func surveyView(didRecieveErrorLoadingSurvey survey: IMSurveyViewController, error: NSError) {
+        //Insert your own code here. This method is required.
+        survey.dismiss()
+    }
   
-  func surveyView(didRecieveErrorLoadingSurvey survey: IMSurveyViewController, error: NSError) {
-    //Insert your own code here. This method is required.
-    survey.dismiss()
-  }
-  
-  func surveyView(didArriveAtLastPageOfSurvey survey: IMSurveyViewController) {
-    //Insert your own code here. This method is required.
-    survey.dismiss()
-  }
+    func surveyView(didArriveAtLastPageOfSurvey survey: IMSurveyViewController) {
+        //Insert your own code here. This method is required.
+        survey.dismiss()
+    }
   
 }
-```
-
-```swift
-InMoment.presentSurveyModally("https://www.inmoment.com/foo", delegate: self)
 ```
 
 NOTE: This will only work for an InMoment survey. An error will occur if any other URL is given.
