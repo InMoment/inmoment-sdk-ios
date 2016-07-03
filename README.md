@@ -4,8 +4,8 @@
 
 ## System Requirements
 
-- **Xcode 7.3** and **Swift 2.2** (The latest stable versions): This framework may not compile on older versions of Xcode or Swift.
-- Apps must require **iOS 8.0** or later: The framework's methods will not be accessible to you if your ```Deployment Target``` is set to anything lower than 8.0.
+- **Xcode 7.3** and **Swift 2.2** (latest stable versions). Apps that include this framework may not build properly if older versions are used.
+- Apps must require **iOS 8.0** or later.
 
 ## Installation
 
@@ -52,10 +52,24 @@ Coming soon...
     ```
     Credit: Daniel Kennett
     
-4. Add the following entries to your application's ```Info.plist```:
+4. Add the following entry to your application's ```Info.plist```:
+
+    ![Image of Info.plist](https://cloud.githubusercontent.com/assets/15389109/16543850/baedac32-40aa-11e6-824e-1c20a85c7c9a.png)
 
     ```xml
-    Coming soon...
+    <key>NSAppTransportSecurity</key>
+    <dict>
+        <key>NSExceptionDomains</key>
+        <dict>
+            <key>www.inmoment.com</key>
+            <dict>
+                <key>NSTemporaryExceptionAllowsInsecureHTTPLoads</key>
+                <true/>
+                <key>NSTemporaryExceptionRequiresForwardSecrecy</key>
+                <false/>
+            </dict>
+        </dict>
+    </dict>
     ```
 
 ## Basic Usage
@@ -67,15 +81,13 @@ import InmomentFeedbackKit
 ```swift
 class ViewController: UIViewController, IMSurveyViewDelegate {
   
-  //This method is required
   func surveyView(didRecieveErrorLoadingSurvey survey: IMSurveyViewController, error: NSError) {
-    //Insert your own code here, such as presenting an alert or logging the error
+    //Insert your own code here. This method is required.
     survey.dismiss()
   }
   
-  //This method is required
   func surveyView(didArriveAtLastPageOfSurvey survey: IMSurveyViewController) {
-    //Insert your own code here
+    //Insert your own code here. This method is required.
     survey.dismiss()
   }
   
@@ -105,7 +117,7 @@ This method is called when the user arrives at the page immediately following th
 #### Recording Next/Previous page button taps (experimental)
 
 ```swift
-func surveyView(didClickPreviousPageButtonInSurvey survey: IMSurveyViewController) {
+func surveyView(didClickPreviousPageButtonInSurvey surveyView: IMSurveyViewController) {
     //Insert your own code here
 }
 
