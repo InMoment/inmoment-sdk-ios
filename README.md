@@ -18,7 +18,7 @@ Coming soon...
 1. [Download](../../releases/latest) the latest release and unzip it.
 2. Drag ```InMomentFeedbackKit.framework``` into your Xcode project and choose "Copy if needed".
 3. Click the ```+``` in the ```Embedded Binaries``` section of your application's target, and select ```InMomentFeedbackKit.framework```.
-3. Add a Run Script build phase after "Embed Frameworks". Copy and paste the following script [(here's why)](http://ikennd.ac/blog/2015/02/stripping-unwanted-architectures-from-dynamic-libraries-in-xcode/):
+3. Add a Run Script build phase after "Embed Frameworks". Copy and paste the following script:
 
     ```bash
     APP_PATH="${TARGET_BUILD_DIR}/${WRAPPER_NAME}"
@@ -50,7 +50,7 @@ Coming soon...
     
     done
     ```
-    Credit: Daniel Kennett
+    Credit: [Daniel Kennett](http://stackoverflow.com/users/29005/ikenndac). This is a workaround to a bug in Xcode 7 that prevents users from uploading apps referencing frameworks that contain simulator slices to iTunes Connect [(click here to learn more)](http://ikennd.ac/blog/2015/02/stripping-unwanted-architectures-from-dynamic-libraries-in-xcode/). We wanted you to still be able to use your app with the simulators, so we intentionally included these slices.
     
 4. Add the following entry to your application's ```Info.plist```:
 
