@@ -18,12 +18,12 @@
     var postStatusMessage = function() {
         var pg = scope.currentPageIndex;
         var messageToPost = {
-            'surveyStatus':{
-                'surveyOver':scope.surveyOver,
-                'percentComplete':scope.percentComplete,
-                'currentPageIndex':scope.currentPageIndex,
-                'currentPageIsCompletionPoint':pg >= 0 ? scope.pages[pg].complete : false,
-                'previousPageWasCompletionPoint':pg > 0 ? scope.pages[pg - 1].complete : false
+            'surveyStatus' : {
+                'surveyOver' : scope.surveyOver,
+                'percentComplete' : scope.percentComplete,
+                'currentPageIndex' : scope.currentPageIndex,
+                'currentPageIsCompletionPoint' : pg >= 0 ? scope.pages[pg].complete : false,
+                'previousPageWasCompletionPoint' : pg > 0 ? scope.pages[pg - 1].complete : false
             }
         }
         postMessage(messageToPost);
@@ -53,7 +53,7 @@
     var scope;
  
 	if(document.body.getAttribute("ng-controller") !== "surveyAppController") {
-        postErrorMessage("This page does not appear to contain an InMoment survey.", "Please ensure that the survey URL you have provided points to an InMoment survey using Websurvey 2.0.");
+		postErrorMessage("This page does not appear to contain an InMoment survey.", "Please ensure that the survey URL you have provided points to an InMoment survey using Websurvey 2.0.");
 		return;
 	}
 	if(typeof angular === "undefined" || !angular) {
