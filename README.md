@@ -1,17 +1,41 @@
 # InMomentFeedbackKit (iOS) (Beta)
 
-# This software is still in beta. Use at your own risk.
+**NOTE: This software is still in beta and is subject to change.**
 
 ## System Requirements
 
-- **Xcode 7.3** and **Swift 2.2** (latest stable versions). Apps that include this framework may not build properly if older versions are used.
+- **Xcode 7.3** and **Swift 2.2** (the latest stable versions). Apps that include this framework may not build properly if older versions of Xcode or Swift are used.
 - Apps must require **iOS 8.0** or later.
 
 ## Installation
 
 ### Installation via CocoaPods (Recommended)
 
-Coming soon...
+1. Add the following line to your ```Podfile```:
+
+    ```ruby
+    pod 'InMomentFeedbackKit'
+    ```
+    
+2. Add the following entry to your application's ```Info.plist```:
+
+    ![Image of Info.plist](https://cloud.githubusercontent.com/assets/15389109/16543850/baedac32-40aa-11e6-824e-1c20a85c7c9a.png)
+
+    ```xml
+    <key>NSAppTransportSecurity</key>
+    <dict>
+        <key>NSExceptionDomains</key>
+        <dict>
+            <key>www.inmoment.com</key>
+            <dict>
+                <key>NSTemporaryExceptionAllowsInsecureHTTPLoads</key>
+                <true/>
+                <key>NSTemporaryExceptionRequiresForwardSecrecy</key>
+                <false/>
+            </dict>
+        </dict>
+    </dict>
+    ```
 
 ### Manual Installation (Discouraged)
 
@@ -50,7 +74,7 @@ Coming soon...
     
     done
     ```
-    Credit: [Daniel Kennett](http://stackoverflow.com/users/29005/ikenndac). This is a workaround to a bug in Xcode 7 that prevents users from uploading apps referencing frameworks that contain simulator slices to iTunes Connect [(click here to learn more)](http://ikennd.ac/blog/2015/02/stripping-unwanted-architectures-from-dynamic-libraries-in-xcode/). We wanted you to still be able to use your app with the simulators, so we intentionally included these slices.
+    Credit: [Daniel Kennett](http://stackoverflow.com/users/29005/ikenndac). This is a workaround for a bug in Xcode 7 that prevents users from uploading apps referencing frameworks that contain simulator slices to iTunes Connect [(click here to learn more)](http://ikennd.ac/blog/2015/02/stripping-unwanted-architectures-from-dynamic-libraries-in-xcode/). We wanted you to still be able to use your app with the simulators, so we intentionally included these slices.
     
 4. Add the following entry to your application's ```Info.plist```:
 
