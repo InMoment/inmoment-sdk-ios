@@ -8,8 +8,8 @@
     var postErrorMessage = function(failureReason, recoverySuggestion) {
         var messageToPost = {
             'error':{
-                'failureReason':failureReason,
-                'recoverySuggestion':recoverySuggestion
+                'failureReason' : failureReason,
+                'recoverySuggestion' : recoverySuggestion
             }
         }
         postMessage(messageToPost);
@@ -31,7 +31,7 @@
  
     var postStatusMessageWhenPageIndexChanges = function() {
         var pageIndex = scope.currentPageIndex;
-        var pollingAction = function(){
+        var pollingAction = function() {
             if(scope.currentPageIndex !== pageIndex) {
                 clearInterval(interval);
                 postStatusMessage();
@@ -42,8 +42,8 @@
     
     var postButtonClickedMessage = function(buttonId) {
         var messageToPost = {
-            'buttonClicked':{
-                'buttonId':buttonId
+            'buttonClicked' : {
+                'buttonId' : buttonId
             }
         }
         postMessage(messageToPost);
@@ -53,7 +53,7 @@
     var scope;
  
 	if(document.body.getAttribute("ng-controller") !== "surveyAppController") {
-		postErrorMessage("This page does not appear to contain an InMoment survey.", "Please ensure that the survey URL you have provided points to an InMoment survey using Websurvey 2.0.");
+        postErrorMessage("This page does not appear to contain an InMoment survey.", "Please ensure that the survey URL you have provided points to an InMoment survey using Websurvey 2.0.");
 		return;
 	}
 	if(typeof angular === "undefined" || !angular) {
