@@ -13,7 +13,7 @@ Pod::Spec.new do |s|
     
     s.homepage     = "https://github.com/InMoment/inmoment-sdk.git"
     s.license      = { :type => "Apache License, Version 2.0", :file => "LICENSE.md" }
-    s.author       = { "Kyler Jensen" => "kjensen@inmoment.com" }
+    s.author       = { "InMoment" => "kjensen@inmoment.com" }
     s.platform     = :ios, "8.0"
     
     s.source       = { :git => "https://github.com/InMoment/inmoment-sdk.git", :tag => "v#{s.version}" }
