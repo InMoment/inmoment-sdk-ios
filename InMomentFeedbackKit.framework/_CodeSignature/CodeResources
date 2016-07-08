@@ -6,7 +6,7 @@
 	<dict>
 		<key>Assets.car</key>
 		<data>
-		qc7ztEbBEuYBsBpjo4I2ts1MbpE=
+		aeKqu0dmF49v2FjODf24NtbUuwc=
 		</data>
 		<key>Headers/InMomentFeedbackKit-Swift.h</key>
 		<data>
@@ -22,7 +22,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		c26LhmTFyc/1RP7y7gwOoSbFu+k=
+		qZzY8xANYoLcHMVhNYIXUPkRY2s=
 		</data>
 		<key>Modules/InMomentFeedbackKit.swiftmodule/arm.swiftdoc</key>
 		<data>
@@ -30,7 +30,7 @@
 		</data>
 		<key>Modules/InMomentFeedbackKit.swiftmodule/arm.swiftmodule</key>
 		<data>
-		qGXb4KSaJnjN8QyBu4oFRp+SPvI=
+		PfDSxz16E0ccSl+KEsKeQCNG54s=
 		</data>
 		<key>Modules/InMomentFeedbackKit.swiftmodule/arm64.swiftdoc</key>
 		<data>
@@ -38,7 +38,7 @@
 		</data>
 		<key>Modules/InMomentFeedbackKit.swiftmodule/arm64.swiftmodule</key>
 		<data>
-		w+dLZ/7pH9gDQF6WQPv3nl+cIh8=
+		u4NhQy0upmKUj+mpnp3BJXw4rhc=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -51,11 +51,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			qc7ztEbBEuYBsBpjo4I2ts1MbpE=
+			aeKqu0dmF49v2FjODf24NtbUuwc=
 			</data>
 			<key>hash2</key>
 			<data>
-			vP4eH00sIkkbP4nnmwzp/L8BSi61twIADifkZ1csrpU=
+			mvYKs3LBhfBogNf7O5fh9JakA1l4yAPcyfNVMqZVzFY=
 			</data>
 		</dict>
 		<key>Headers/InMomentFeedbackKit-Swift.h</key>
@@ -106,11 +106,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			qGXb4KSaJnjN8QyBu4oFRp+SPvI=
+			PfDSxz16E0ccSl+KEsKeQCNG54s=
 			</data>
 			<key>hash2</key>
 			<data>
-			ye4GtED7ON+Jhj31OG34tvgR6N5lD6rzsJV+6xfiZig=
+			saust3oxh+b794UzN7rcUsiEzWFmsVcQQQD0VxSwAjU=
 			</data>
 		</dict>
 		<key>Modules/InMomentFeedbackKit.swiftmodule/arm64.swiftdoc</key>
@@ -128,11 +128,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			w+dLZ/7pH9gDQF6WQPv3nl+cIh8=
+			u4NhQy0upmKUj+mpnp3BJXw4rhc=
 			</data>
 			<key>hash2</key>
 			<data>
-			++GKOX400a87VjH8S/pSLUk3mxdVNdwhkTxej4DChvU=
+			unxK0DTVh74pVgsDzH/WNZPH3FQQMtsUrI6cYfHQnHo=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
