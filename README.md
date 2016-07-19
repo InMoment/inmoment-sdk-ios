@@ -63,7 +63,7 @@ This method is called when the user arrives at the page immediately following th
 
 ### Special Note: App Transport Security
 
-All survey data is encrypted via SSL, but there are some elements of the survey, (e.g. images and css), which are not encrypted. We are working on this issue, but until this is resolved you may turn off App Transport Security by adding the following entry to your application's ```Info.plist```:
+All survey data is encrypted via SSL, but there are some elements of the survey, (e.g. images and css), which are not encrypted yet. We are working on this issue, but until this is resolved you may turn off App Transport Security by adding the following entry to your application's ```Info.plist```:
 
 ![Image of Info.plist](https://cloud.githubusercontent.com/assets/15389109/16668212/5c28aea8-444d-11e6-8857-14992f488edd.jpg)
 
