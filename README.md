@@ -7,7 +7,7 @@
 - **Xcode 7.3** and **Swift 2.2** (the latest stable versions). Apps that include this framework may not build properly if older versions of Xcode or Swift are used.
 - Apps must require **iOS 8.0** or later.
 
-## Basic Usage
+## Usage
 
 ```swift
 import InmomentFeedbackKit
@@ -30,6 +30,10 @@ class ViewController: UIViewController, IMSurveyViewDelegate {
         //Insert your own code here. This method is required.
         survey.dismiss()
     }
+    
+    func surveyView(didPassCompletionPointInSurvey survey: IMSurveyViewController) {
+        //Insert your own code here. This method is optional.
+    }
   
 }
 ```
@@ -48,35 +52,17 @@ All survey data is encrypted via SSL, but there are some elements of the survey 
 </dict>
 ```
 
-## Advanced Usage
-
-The ```IMSurveyViewDelegate``` protocol provides some additional, optional methods for interacting with surveys:
-
-#### Recording survey completion
+### Recording survey completion
 
 ```swift
-func surveyView(didPassCompletionPointInSurvey survey: IMSurveyViewController) {
-    //Insert your own code here
-}
+func surveyView(didPassCompletionPointInSurvey survey: IMSurveyViewController)
 ```
   
-This method is called when the user arrives at the page immediately following the survey completion point. Once this happens, the survey response will be available on InMoment reports and in Focus™, (even if the user doesn't continue until the very last page of the survey). Use this method to perform actions such as recording that the user has finished taking the survey and giving the user a reward.
+This method is called when the user arrives at the page immediately following the survey completion point. Once this happens, the survey response will be available in InMoment reports and in Focus™, (even if the user doesn't continue until the very last page of the survey). Use this method to perform actions such as recording that the user has finished taking the survey or giving the user a reward.
 
-#### Recording Next/Previous page button taps (experimental)
+## Installation
 
-```swift
-func surveyView(didClickPreviousPageButtonInSurvey surveyView: IMSurveyViewController) {
-    //Insert your own code here
-}
-
-func surveyView(didClickNextPageButtonInSurvey survey: IMSurveyViewController) {
-    //Insert your own code here
-}
-```
-
-These methods are called immediately when the user taps the "next" or "previous" page buttons in the survey. These methods can be used to monitor that the user is "still there" or performing other actions. These methods are experimental, and may be deprecated or removed in future versions.
-
-## Installation via CocoaPods (Recommended)
+### Installation via CocoaPods (Recommended)
 
 Just add the following line to your ```Podfile```:
 
@@ -84,12 +70,12 @@ Just add the following line to your ```Podfile```:
 pod 'InMomentFeedbackKit'
 ```
     
-## Manual Installation
+### Manual Installation
 
 1. [Download](https://www.github.com/InMoment/inmoment-sdk/releases/latest) and unzip the latest release.
 2. Drag ```InMomentFeedbackKit.framework``` into your Xcode project and choose "Copy if needed".
 3. Click the ```+``` in the ```Embedded Binaries``` section of your application's target, and select ```InMomentFeedbackKit.framework```.
-3. Add a Run Script build phase after "Embed Frameworks". Copy and paste the following script:
+3. Add a "Run Script" build phase after "Embed Frameworks". Copy and paste the following script:
 
     ```bash
     APP_PATH="${TARGET_BUILD_DIR}/${WRAPPER_NAME}"
