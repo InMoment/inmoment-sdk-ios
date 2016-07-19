@@ -6,11 +6,11 @@
 	<dict>
 		<key>Assets.car</key>
 		<data>
-		aeKqu0dmF49v2FjODf24NtbUuwc=
+		3V5AsTbUIhn+3tqkDt7a4vnZqN8=
 		</data>
 		<key>Headers/InMomentFeedbackKit-Swift.h</key>
 		<data>
-		PmWr5jb9mbhTNFi3lS03o+QDLOo=
+		aDw5a38/KuR+luybtNr0oL4hAPw=
 		</data>
 		<key>Headers/InMomentFeedbackKit.h</key>
 		<data>
@@ -22,7 +22,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		qZzY8xANYoLcHMVhNYIXUPkRY2s=
+		jCWOtcpYLLIda/ULH1jK+CYWSe4=
 		</data>
 		<key>Modules/InMomentFeedbackKit.swiftmodule/arm.swiftdoc</key>
 		<data>
@@ -30,7 +30,7 @@
 		</data>
 		<key>Modules/InMomentFeedbackKit.swiftmodule/arm.swiftmodule</key>
 		<data>
-		PfDSxz16E0ccSl+KEsKeQCNG54s=
+		m2wx9ELtgj6LIKrdgTojbt4O+j8=
 		</data>
 		<key>Modules/InMomentFeedbackKit.swiftmodule/arm64.swiftdoc</key>
 		<data>
@@ -38,7 +38,7 @@
 		</data>
 		<key>Modules/InMomentFeedbackKit.swiftmodule/arm64.swiftmodule</key>
 		<data>
-		u4NhQy0upmKUj+mpnp3BJXw4rhc=
+		6X9MFRTLkRakmy3TL4sqOclke0g=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -51,22 +51,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			aeKqu0dmF49v2FjODf24NtbUuwc=
+			3V5AsTbUIhn+3tqkDt7a4vnZqN8=
 			</data>
 			<key>hash2</key>
 			<data>
-			mvYKs3LBhfBogNf7O5fh9JakA1l4yAPcyfNVMqZVzFY=
+			NObfA9/r7gU53qe+/5ZjSd/9FMHQFDeyVqWZ0g2SJwg=
 			</data>
 		</dict>
 		<key>Headers/InMomentFeedbackKit-Swift.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			PmWr5jb9mbhTNFi3lS03o+QDLOo=
+			aDw5a38/KuR+luybtNr0oL4hAPw=
 			</data>
 			<key>hash2</key>
 			<data>
-			uybcj1FSQhbKW6Jdlmlx+rGGTgOdxSZwdjhChdWzEIo=
+			6N78XEtW3hFQ0zp9a5E/nS0eaEaRhIsuZAKguyg1Y9U=
 			</data>
 		</dict>
 		<key>Headers/InMomentFeedbackKit.h</key>
@@ -106,11 +106,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			PfDSxz16E0ccSl+KEsKeQCNG54s=
+			m2wx9ELtgj6LIKrdgTojbt4O+j8=
 			</data>
 			<key>hash2</key>
 			<data>
-			saust3oxh+b794UzN7rcUsiEzWFmsVcQQQD0VxSwAjU=
+			aOfAnaZrjl2bspVzY1YDHQ70zMjwwtr7+SZBIgeieiM=
 			</data>
 		</dict>
 		<key>Modules/InMomentFeedbackKit.swiftmodule/arm64.swiftdoc</key>
@@ -128,11 +128,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			u4NhQy0upmKUj+mpnp3BJXw4rhc=
+			6X9MFRTLkRakmy3TL4sqOclke0g=
 			</data>
 			<key>hash2</key>
 			<data>
-			unxK0DTVh74pVgsDzH/WNZPH3FQQMtsUrI6cYfHQnHo=
+			fVu9o+RBv3Zh+aVMNO89uJhGYxr2tNnUhXM+Ie1yQPI=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

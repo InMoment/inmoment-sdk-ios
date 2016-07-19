@@ -144,8 +144,6 @@ SWIFT_CLASS("_TtC19InMomentFeedbackKit22IMSurveyViewController")
 SWIFT_PROTOCOL("_TtP19InMomentFeedbackKit20IMSurveyViewDelegate_")
 @protocol IMSurveyViewDelegate
 @optional
-- (void)surveyViewWithDidClickPreviousPageButtonInSurvey:(IMSurveyViewController * _Nonnull)survey;
-- (void)surveyViewWithDidClickNextPageButtonInSurvey:(IMSurveyViewController * _Nonnull)survey;
 - (void)surveyViewWithDidPassCompletionPointInSurvey:(IMSurveyViewController * _Nonnull)survey;
 @required
 - (void)surveyViewWithDidRecieveErrorLoadingSurvey:(IMSurveyViewController * _Nonnull)survey error:(NSError * _Nonnull)error;
