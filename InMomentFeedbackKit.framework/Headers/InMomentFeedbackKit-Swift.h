@@ -155,8 +155,10 @@ SWIFT_PROTOCOL("_TtP19InMomentFeedbackKit20IMSurveyViewDelegate_")
 @interface IMWebViewController (SWIFT_EXTENSION(InMomentFeedbackKit))
 @end
 
+@class WKNavigationAction;
 
 @interface IMWebViewController (SWIFT_EXTENSION(InMomentFeedbackKit)) <WKNavigationDelegate>
+- (void)webView:(WKWebView * _Nonnull)webView decidePolicyForNavigationAction:(WKNavigationAction * _Nonnull)navigationAction decisionHandler:(void (^ _Nonnull)(WKNavigationActionPolicy))decisionHandler;
 - (void)webView:(WKWebView * _Nonnull)webView didStartProvisionalNavigation:(WKNavigation * _Null_unspecified)navigation;
 - (void)webView:(WKWebView * _Nonnull)webView didFinishNavigation:(WKNavigation * _Null_unspecified)navigation;
 - (void)webView:(WKWebView * _Nonnull)webView didFailProvisionalNavigation:(WKNavigation * _Null_unspecified)navigation withError:(NSError * _Nonnull)error;
