@@ -116,8 +116,6 @@ SWIFT_CLASS("_TtC19InMomentFeedbackKit19IMWebViewController")
 
 SWIFT_CLASS("_TtC19InMomentFeedbackKit22IMSurveyViewController")
 @interface IMSurveyViewController : IMWebViewController
-@property (nonatomic, strong) id <IMSurveyViewDelegate> _Nullable delegate;
-@property (nonatomic, copy) NSString * _Nullable surveyURL;
 - (nonnull instancetype)initWithSurveyURL:(NSString * _Nonnull)surveyURL delegate:(id <IMSurveyViewDelegate> _Nonnull)delegate OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 - (void)viewDidAppear:(BOOL)animated;
