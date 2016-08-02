@@ -10,7 +10,7 @@
 ## Usage
 
 ```swift
-import Inmoment
+import InMoment
 ```
     
 ```swift
