@@ -1,4 +1,4 @@
-# InMomentFeedbackKit (iOS) (Beta)
+# InMoment SDK (iOS) (Beta)
 
 **NOTE: This software is still in beta and is subject to change.**
 
