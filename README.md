@@ -10,7 +10,7 @@
 ## Usage
 
 ```swift
-import InmomentFeedbackKit
+import Inmoment
 ```
     
 ```swift
