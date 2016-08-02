@@ -18,7 +18,7 @@ class ViewController: UIViewController, InMomentSurveyDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        InMoment.presentSurveyModally(gateway: "MySurveyGateway" parameters: ["offercode":"0000"], delegate: self)
+        InMoment.presentSurveyModally(gateway: "MySurveyGateway", delegate: self)
     }
     
     func surveyView(didRecieveErrorLoadingSurvey survey: InMomentSurvey, error: NSError) {
@@ -47,7 +47,7 @@ public static func presentSurveyModally(gateway: String, parameters: [String:Str
 
 Calling this method presents a survey modally using the given ```presentationStyle```.
 - ```gateway``` (required): A valid InMoment web survey gateway. Ask your CSM or operations specialist for details.
-- ```parameters``` (optional): A dictionary of strings corresponding to survey URL parameters. In the above example "offercode" is set to "0000".
+- ```parameters``` (optional): A dictionary of strings corresponding to survey URL parameters.
 - ```delegate``` (required): A reference to an implementation of ```InMomentSurveyDelegate```. In the above example, ```self``` is used.
 - ```presentationStyle``` (optional): The desired ```UIModalPresentationStyle```. Defaults to: ```.PageSheet```.
 
