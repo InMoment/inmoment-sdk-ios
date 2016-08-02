@@ -6,11 +6,11 @@
 	<dict>
 		<key>Assets.car</key>
 		<data>
-		Xfj2PU0iQvLKkiuSm9MH2E4fW4g=
+		DMk+uMZpJ266NtRTWgklxB28vzs=
 		</data>
 		<key>Headers/InMomentFeedbackKit-Swift.h</key>
 		<data>
-		iZZM6tpjnVmseWLAVGzThQHFKCU=
+		l/lIqFcJBRvwHbu3ixrHL08dCws=
 		</data>
 		<key>Headers/InMomentFeedbackKit.h</key>
 		<data>
@@ -18,11 +18,11 @@
 		</data>
 		<key>IMSurveyScript.js</key>
 		<data>
-		PIq3rr/Pagz0j3725J2jRpLbkUM=
+		W4mo3OOmB/K0tn7/ju97SX8YfiE=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		f5Ix6+6cjV5omf5bOwKhUd+zeQ4=
+		U/zYa6seNxHibK9WDF6ectF4ZN8=
 		</data>
 		<key>Modules/InMomentFeedbackKit.swiftmodule/arm.swiftdoc</key>
 		<data>
@@ -30,7 +30,7 @@
 		</data>
 		<key>Modules/InMomentFeedbackKit.swiftmodule/arm.swiftmodule</key>
 		<data>
-		fJGBLtgJ2yi5SswODm8WUsmUk2E=
+		uDGcUzlSE/9RXQM4yn22i+IfHp0=
 		</data>
 		<key>Modules/InMomentFeedbackKit.swiftmodule/arm64.swiftdoc</key>
 		<data>
@@ -38,7 +38,7 @@
 		</data>
 		<key>Modules/InMomentFeedbackKit.swiftmodule/arm64.swiftmodule</key>
 		<data>
-		SMhA/ZfMIId8VyV3E305Lwj7bV0=
+		rxBqGNIPrlJjz/HPOLWYaMOpSK8=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -51,22 +51,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			Xfj2PU0iQvLKkiuSm9MH2E4fW4g=
+			DMk+uMZpJ266NtRTWgklxB28vzs=
 			</data>
 			<key>hash2</key>
 			<data>
-			yBezv1l25D1fXSpvTYpzO6hqa5cXZWZ6HoMTmWGI0BM=
+			ZeM9Szcl98ObO8DBQ++oIc2ol5qeS+Yfxt6vCeMkCzU=
 			</data>
 		</dict>
 		<key>Headers/InMomentFeedbackKit-Swift.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			iZZM6tpjnVmseWLAVGzThQHFKCU=
+			l/lIqFcJBRvwHbu3ixrHL08dCws=
 			</data>
 			<key>hash2</key>
 			<data>
-			eiIxkmt2LuAk58I2rF9MkqCjF+/cfncRUZkdzpD/SS0=
+			3OMLABhwgNb5Yn+LBVhSpKq8Tqdj9+UKgSE975hgR6Q=
 			</data>
 		</dict>
 		<key>Headers/InMomentFeedbackKit.h</key>
@@ -84,11 +84,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			PIq3rr/Pagz0j3725J2jRpLbkUM=
+			W4mo3OOmB/K0tn7/ju97SX8YfiE=
 			</data>
 			<key>hash2</key>
 			<data>
-			sJ5IbVjRRwfo8GThwUtpUCN3US3jluLwIavsuuzim+Y=
+			Q2VPUBnr+Yoy587v+w3FuilOmCF9/lIGLx+Igs1bgg0=
 			</data>
 		</dict>
 		<key>Modules/InMomentFeedbackKit.swiftmodule/arm.swiftdoc</key>
@@ -106,11 +106,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			fJGBLtgJ2yi5SswODm8WUsmUk2E=
+			uDGcUzlSE/9RXQM4yn22i+IfHp0=
 			</data>
 			<key>hash2</key>
 			<data>
-			kOE0Lwqn+0ePaDAkxLqAT8rCZk6puoBfP36xg5n/iBw=
+			P8zoeRQnmfhMV7VHOu7kYFKMNlm7efwi8H2+z5PwkJ0=
 			</data>
 		</dict>
 		<key>Modules/InMomentFeedbackKit.swiftmodule/arm64.swiftdoc</key>
@@ -128,11 +128,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			SMhA/ZfMIId8VyV3E305Lwj7bV0=
+			rxBqGNIPrlJjz/HPOLWYaMOpSK8=
 			</data>
 			<key>hash2</key>
 			<data>
-			BoluTT1pka4xLL4IMHD79ctiu87ZssurHTWsUpTARsE=
+			0iiAxsHTYNjZONOxtGxYk/8qmkJFOc0PTo0eesMKG4I=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

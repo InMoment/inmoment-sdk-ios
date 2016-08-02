@@ -92,79 +92,39 @@ typedef int swift_int4  __attribute__((__ext_vector_type__(4)));
 # endif
 #endif
 #if defined(__has_feature) && __has_feature(modules)
+@import ObjectiveC;
 @import UIKit;
-@import WebKit;
 @import Foundation;
 #endif
 
 #pragma clang diagnostic ignored "-Wproperty-attribute-mismatch"
 #pragma clang diagnostic ignored "-Wduplicate-method-arg"
-@class UIProgressView;
-@class NSCoder;
+@protocol InMomentSurveyDelegate;
+@class UIColor;
 
-SWIFT_CLASS("_TtC19InMomentFeedbackKit19IMWebViewController")
-@interface IMWebViewController : UIViewController
-@property (nonatomic, readonly, strong) UIProgressView * _Nonnull progressView;
-- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
-- (void)viewDidLoad;
-- (void)viewDidLayoutSubviews;
-- (void)presentViewController:(UIViewController * _Nonnull)viewControllerToPresent animated:(BOOL)flag completion:(void (^ _Nullable)(void))completion;
-- (void)dismissViewControllerAnimated:(BOOL)flag completion:(void (^ _Nullable)(void))completion;
+SWIFT_CLASS("_TtC19InMomentFeedbackKit8InMoment")
+@interface InMoment : NSObject
++ (void)presentSurveyModallyWithGateway:(NSString * _Nonnull)gateway parameters:(NSDictionary<NSString *, NSString *> * _Nonnull)parameters delegate:(id <InMomentSurveyDelegate> _Nonnull)delegate presentationStyle:(UIModalPresentationStyle)presentationStyle navigationBarStyle:(UIBarStyle)navigationBarStyle navigationBarTintColor:(UIColor * _Nonnull)navigationBarTintColor progressBarColor:(UIColor * _Nonnull)progressBarColor;
++ (void)presentSurveyModallyWithGateway:(NSString * _Nonnull)gateway parameters:(NSDictionary<NSString *, NSString *> * _Nonnull)parameters delegate:(id <InMomentSurveyDelegate> _Nonnull)delegate presentationStyle:(UIModalPresentationStyle)presentationStyle;
 @end
 
-@protocol IMSurveyViewDelegate;
 
-SWIFT_CLASS("_TtC19InMomentFeedbackKit22IMSurveyViewController")
-@interface IMSurveyViewController : IMWebViewController
-- (nonnull instancetype)initWithSurveyURL:(NSString * _Nonnull)surveyURL delegate:(id <IMSurveyViewDelegate> _Nonnull)delegate OBJC_DESIGNATED_INITIALIZER;
-- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
-- (void)viewDidAppear:(BOOL)animated;
+SWIFT_PROTOCOL("_TtP19InMomentFeedbackKit14InMomentSurvey_")
+@protocol InMomentSurvey
 - (void)dismiss;
-- (void)reloadSurvey;
+- (void)startOver;
+- (void)alert:(NSString * _Nullable)title message:(NSString * _Nullable)message okButtonText:(NSString * _Nonnull)okButtonText handler:(void (^ _Nullable)(void))handler;
 @end
 
-@class WKUserContentController;
-@class WKScriptMessage;
-
-@interface IMSurveyViewController (SWIFT_EXTENSION(InMomentFeedbackKit)) <WKScriptMessageHandler>
-- (void)userContentController:(WKUserContentController * _Nonnull)userContentController didReceiveScriptMessage:(WKScriptMessage * _Nonnull)message;
-@end
-
-@class WKWebView;
-@class WKNavigation;
 @class NSError;
 
-@interface IMSurveyViewController (SWIFT_EXTENSION(InMomentFeedbackKit))
-- (void)webView:(WKWebView * _Nonnull)webView didFailProvisionalNavigation:(WKNavigation * _Null_unspecified)navigation withError:(NSError * _Nonnull)error;
-@end
-
-
-SWIFT_PROTOCOL("_TtP19InMomentFeedbackKit20IMSurveyViewDelegate_")
-@protocol IMSurveyViewDelegate
+SWIFT_PROTOCOL("_TtP19InMomentFeedbackKit22InMomentSurveyDelegate_")
+@protocol InMomentSurveyDelegate
 @optional
-- (void)surveyViewWithDidPassCompletionPointInSurvey:(IMSurveyViewController * _Nonnull)survey;
+- (void)didPassCompletionPointInSurvey:(id <InMomentSurvey> _Nonnull)survey;
 @required
-- (void)surveyViewWithDidRecieveErrorLoadingSurvey:(IMSurveyViewController * _Nonnull)survey error:(NSError * _Nonnull)error;
-- (void)surveyViewWithDidArriveAtLastPageOfSurvey:(IMSurveyViewController * _Nonnull)survey;
-@end
-
-
-
-@interface IMWebViewController (SWIFT_EXTENSION(InMomentFeedbackKit))
-@end
-
-@class WKNavigationAction;
-
-@interface IMWebViewController (SWIFT_EXTENSION(InMomentFeedbackKit)) <WKNavigationDelegate>
-- (void)webView:(WKWebView * _Nonnull)webView decidePolicyForNavigationAction:(WKNavigationAction * _Nonnull)navigationAction decisionHandler:(void (^ _Nonnull)(WKNavigationActionPolicy))decisionHandler;
-- (void)webView:(WKWebView * _Nonnull)webView didStartProvisionalNavigation:(WKNavigation * _Null_unspecified)navigation;
-- (void)webView:(WKWebView * _Nonnull)webView didFinishNavigation:(WKNavigation * _Null_unspecified)navigation;
-- (void)webView:(WKWebView * _Nonnull)webView didFailProvisionalNavigation:(WKNavigation * _Null_unspecified)navigation withError:(NSError * _Nonnull)error;
-- (void)observeValueForKeyPath:(NSString * _Nullable)keyPath ofObject:(id _Nullable)object change:(NSDictionary<NSString *, id> * _Nullable)change context:(void * _Null_unspecified)context;
-@end
-
-
-@interface IMWebViewController (SWIFT_EXTENSION(InMomentFeedbackKit))
+- (void)didRecieveErrorLoadingSurvey:(id <InMomentSurvey> _Nonnull)survey error:(NSError * _Nonnull)error;
+- (void)didArriveAtLastPageOfSurvey:(id <InMomentSurvey> _Nonnull)survey;
 @end
 
 
@@ -185,6 +145,11 @@ SWIFT_PROTOCOL("_TtP19InMomentFeedbackKit20IMSurveyViewDelegate_")
 
 
 @interface UIImage (SWIFT_EXTENSION(InMomentFeedbackKit))
+@end
+
+
+@interface UINavigationController (SWIFT_EXTENSION(InMomentFeedbackKit))
+- (void)viewDidLoad;
 @end
 
 

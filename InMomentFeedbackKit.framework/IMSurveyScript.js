@@ -1,6 +1,9 @@
 
 (function() {
-    
+ 
+    document.documentElement.style.webkitUserSelect='none';
+    document.documentElement.style.webkitTouchCallout='none';
+ 
     var postMessage = function(messageToPost) {
         window.webkit.messageHandlers.InMoment.postMessage(messageToPost);
     }
@@ -23,7 +26,8 @@
                 'percentComplete' : scope.percentComplete,
                 'currentPageIndex' : scope.currentPageIndex,
                 'currentPageIsCompletionPoint' : pg >= 0 ? scope.pages[pg].complete : false,
-                'previousPageWasCompletionPoint' : pg > 0 ? scope.pages[pg - 1].complete : false
+                'previousPageWasCompletionPoint' : pg > 0 ? scope.pages[pg - 1].complete : false,
+                'pageHeight' : window.getComputedStyle(document.documentElement, null).height
             }
         }
         postMessage(messageToPost);
@@ -85,6 +89,6 @@
             postButtonClickedMessage('prevPageLink');
         }
     }
-    postStatusMessage();
+    postStatusMessageWhenPageIndexChanges();
 
  })();
