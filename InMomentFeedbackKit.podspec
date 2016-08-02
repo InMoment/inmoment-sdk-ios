@@ -2,7 +2,7 @@
 Pod::Spec.new do |s|
 
     s.name         = "InMomentFeedbackKit"
-    s.version      = "0.3.0"#<<AUTOVERSION
+    s.version      = "0.3.1"#<<AUTOVERSION
     s.summary      = "Lauch and interact with InMoment web surveys."
 
     s.description  = <<-DESC
