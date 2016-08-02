@@ -55,6 +55,7 @@ Calling this method presents a survey modally using the given ```presentationSty
 ### Recording survey completion
 
 ```swift
+//protocol InMomentSurveyDelegate
 optional func surveyView(didPassCompletionPointInSurvey survey: InMomentSurvey)
 ```
   
