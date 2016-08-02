@@ -18,7 +18,7 @@ class ViewController: UIViewController, InMomentSurveyDelegate {
 
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
-        InMoment.presentSurveyModally(gateway: "MySurveyGateway", delegate: self)
+        InMoment.presentSurveyModally(usingGateway: "MySurveyGateway", delegate: self)
     }
     
     func surveyView(didRecieveErrorLoadingSurvey survey: InMomentSurvey, error: NSError) {
@@ -42,12 +42,12 @@ class ViewController: UIViewController, InMomentSurveyDelegate {
 
 ```swift
 //class InMoment
-public static func presentSurveyModally(gateway: String, parameters: [String:String] = [:], delegate: InMomentSurveyDelegate, presentationStyle: UIModalPresentationStyle = .PageSheet)
+public static func presentSurveyModally(usingGateway gateway: String, withParameters parameters: [String:String] = [:], delegate: InMomentSurveyDelegate, presentationStyle: UIModalPresentationStyle = .PageSheet)
 ```
 
 Calling this method presents a survey modally using the given ```presentationStyle```.
-- ```gateway``` (required): A valid InMoment web survey gateway. Ask your CSM or operations specialist for details.
-- ```parameters``` (optional): A dictionary of strings corresponding to survey URL parameters.
+- ```usingGateway``` ```gateway``` (required): A valid InMoment web survey gateway. Ask your CSM or operations specialist for details.
+- ```withParameters``` ```parameters``` (optional): A dictionary of strings corresponding to survey URL parameters.
 - ```delegate``` (required): A reference to an implementation of ```InMomentSurveyDelegate```. In the above example, ```self``` is used.
 - ```presentationStyle``` (optional): The desired ```UIModalPresentationStyle```. Defaults to: ```.PageSheet```.
 
