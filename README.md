@@ -14,24 +14,24 @@ import InmomentFeedbackKit
 ```
     
 ```swift
-class ViewController: UIViewController, IMSurveyViewDelegate {
+class ViewController: UIViewController, InMomentSurveyDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        InMoment.presentSurveyModally("https://www.inmoment.com/foo", delegate: self)
+        InMoment.presentSurveyModally(gateway: "MySurveyGateway" parameters: ["offercode":"0000"], delegate: self)
     }
     
-    func surveyView(didRecieveErrorLoadingSurvey survey: IMSurveyViewController, error: NSError) {
+    func surveyView(didRecieveErrorLoadingSurvey survey: InMomentSurvey, error: NSError) {
         //Insert your own code here. This method is required.
         survey.dismiss()
     }
   
-    func surveyView(didArriveAtLastPageOfSurvey survey: IMSurveyViewController) {
+    func surveyView(didArriveAtLastPageOfSurvey survey: InMomentSurvey) {
         //Insert your own code here. This method is required.
         survey.dismiss()
     }
     
-    func surveyView(didPassCompletionPointInSurvey survey: IMSurveyViewController) {
+    func surveyView(didPassCompletionPointInSurvey survey: InMomentSurvey) {
         //Insert your own code here. This method is optional.
     }
   
@@ -42,21 +42,20 @@ class ViewController: UIViewController, IMSurveyViewDelegate {
 
 ```swift
 //class InMoment
-public static func presentSurveyModally(surveyURL: String, delegate: IMSurveyViewDelegate, presentationStyle: UIModalPresentationStyle = .PageSheet)
+public static func presentSurveyModally(gateway: String, parameters: [String:String] = [:], delegate: InMomentSurveyDelegate, presentationStyle: UIModalPresentationStyle = .PageSheet)
 ```
 
 Calling this method presents a survey modally using the given ```presentationStyle```.
-
-Parameters:<br/>
-```surveyURL```: A valid URL pointing to an InMoment web survey. This must contain the ```https://``` prefix.<br/>
-```delegate```: A reference to an implementation of ```IMSurveyViewDelegate```. In the above example ```self``` is used.
-```presentationStyle```: The desired ```UIModalPresentationStyle```. Defaults to: ```.PageSheet```.
+- ```gateway``` (required): A valid InMoment web survey gateway. Ask your CSM or operations specialist for details.
+- ```parameters``` (optional): A dictionary of strings corresponding to survey URL parameters. In the above example "offercode" is set to "0000".
+- ```delegate``` (required): A reference to an implementation of ```InMomentSurveyDelegate```. In the above example, ```self``` is used.
+- ```presentationStyle``` (optional): The desired ```UIModalPresentationStyle```. Defaults to: ```.PageSheet```.
 
 
 ### Recording survey completion
 
 ```swift
-optional func surveyView(didPassCompletionPointInSurvey survey: IMSurveyViewController)
+optional func surveyView(didPassCompletionPointInSurvey survey: InMomentSurvey)
 ```
   
 This method is called when the user arrives at the page immediately following the survey completion point. Once this happens, the survey response will be available in InMoment reports and in Focus™, (even if the user doesn't continue until the very last page of the survey). Use this method to perform actions such as recording that the user has finished taking the survey or giving the user a reward.
