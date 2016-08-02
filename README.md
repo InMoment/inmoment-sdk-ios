@@ -16,8 +16,8 @@ import InmomentFeedbackKit
 ```swift
 class ViewController: UIViewController, InMomentSurveyDelegate {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
         InMoment.presentSurveyModally(gateway: "MySurveyGateway", delegate: self)
     }
     
