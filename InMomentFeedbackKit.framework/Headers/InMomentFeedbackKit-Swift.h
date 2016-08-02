@@ -104,8 +104,8 @@ typedef int swift_int4  __attribute__((__ext_vector_type__(4)));
 
 SWIFT_CLASS("_TtC19InMomentFeedbackKit8InMoment")
 @interface InMoment : NSObject
-+ (void)presentSurveyModallyWithGateway:(NSString * _Nonnull)gateway parameters:(NSDictionary<NSString *, NSString *> * _Nonnull)parameters delegate:(id <InMomentSurveyDelegate> _Nonnull)delegate presentationStyle:(UIModalPresentationStyle)presentationStyle navigationBarStyle:(UIBarStyle)navigationBarStyle navigationBarTintColor:(UIColor * _Nonnull)navigationBarTintColor progressBarColor:(UIColor * _Nonnull)progressBarColor;
-+ (void)presentSurveyModallyWithGateway:(NSString * _Nonnull)gateway parameters:(NSDictionary<NSString *, NSString *> * _Nonnull)parameters delegate:(id <InMomentSurveyDelegate> _Nonnull)delegate presentationStyle:(UIModalPresentationStyle)presentationStyle;
++ (void)presentSurveyModallyUsingGateway:(NSString * _Nonnull)gateway withParameters:(NSDictionary<NSString *, NSString *> * _Nonnull)parameters delegate:(id <InMomentSurveyDelegate> _Nonnull)delegate presentationStyle:(UIModalPresentationStyle)presentationStyle navigationBarStyle:(UIBarStyle)navigationBarStyle navigationBarTintColor:(UIColor * _Nonnull)navigationBarTintColor progressBarColor:(UIColor * _Nonnull)progressBarColor;
++ (void)presentSurveyModallyUsingGateway:(NSString * _Nonnull)gateway withParameters:(NSDictionary<NSString *, NSString *> * _Nonnull)parameters delegate:(id <InMomentSurveyDelegate> _Nonnull)delegate presentationStyle:(UIModalPresentationStyle)presentationStyle;
 @end
 
 
