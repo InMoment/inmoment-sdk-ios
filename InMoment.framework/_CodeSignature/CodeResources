@@ -6,15 +6,15 @@
 	<dict>
 		<key>Assets.car</key>
 		<data>
-		LKXVyonDZOjgZ6D64W7VBBYeOfw=
+		hfOgAj5YdZbGXJmmG2lsebqDI7o=
 		</data>
 		<key>Headers/InMoment-Swift.h</key>
 		<data>
-		+MJ3DcmYeW1RiFlC+L+z13UEY+0=
+		+/4mrErt4klzoRMxvEZTScEiG/8=
 		</data>
-		<key>Headers/InMomentFeedbackKit.h</key>
+		<key>Headers/InMoment.h</key>
 		<data>
-		quTiZ5TVTfe5qOnUzX+DXA2tlvc=
+		TCnlaKEEVKG4O9ccJmZ92kfuYJ0=
 		</data>
 		<key>IMSurveyScript.js</key>
 		<data>
@@ -22,27 +22,27 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		sJBgux5FEG1j1DVwpjsupOiz94w=
+		GisuuEacFGk10FQrJueIcdUgXJA=
 		</data>
 		<key>Modules/InMoment.swiftmodule/arm.swiftdoc</key>
 		<data>
-		vX3li+0pmJfxIOleJRvM7XzulwQ=
+		jgDTGDB4SyyP+sUsAbgwBsiTmKQ=
 		</data>
 		<key>Modules/InMoment.swiftmodule/arm.swiftmodule</key>
 		<data>
-		p7Am25dSrgH79YsLSNQE3wIRaaI=
+		5tEDwXxuzskH+JY2CKnTgIyOSjY=
 		</data>
 		<key>Modules/InMoment.swiftmodule/arm64.swiftdoc</key>
 		<data>
-		7BUlQBrhUQ77wbgVsUxliml4eHA=
+		8IiaWDYO2W0A68WzZ1EsKZFJ6j8=
 		</data>
 		<key>Modules/InMoment.swiftmodule/arm64.swiftmodule</key>
 		<data>
-		ZUzP6FmeuAYixTfXZo82Lx/LAtg=
+		aj1oU/7hxMeTnkybz3O2uzqBEFc=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
-		/XeWJsgawxcRYSmakXvNrt4+JFA=
+		ce+u05jIBCv7yFxAwe5uGd+8TzU=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -51,33 +51,33 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			LKXVyonDZOjgZ6D64W7VBBYeOfw=
+			hfOgAj5YdZbGXJmmG2lsebqDI7o=
 			</data>
 			<key>hash2</key>
 			<data>
-			Sxr0RUOMWu47dWSYPjfVVOia2Tii6YF9IPaeBaS/ZPI=
+			2/26YkRsFz6protkoXMk9ELe6LLzV1DugSsJwwMOJ9k=
 			</data>
 		</dict>
 		<key>Headers/InMoment-Swift.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			+MJ3DcmYeW1RiFlC+L+z13UEY+0=
+			+/4mrErt4klzoRMxvEZTScEiG/8=
 			</data>
 			<key>hash2</key>
 			<data>
-			OYZKXeMZtOMKvG0WCm9qT7dkXqlResrvs72U6LKiHHQ=
+			4M06l1PL+/tSpp/Q34zI+SGpGHZ406wD8jGTsmSQB2k=
 			</data>
 		</dict>
-		<key>Headers/InMomentFeedbackKit.h</key>
+		<key>Headers/InMoment.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			quTiZ5TVTfe5qOnUzX+DXA2tlvc=
+			TCnlaKEEVKG4O9ccJmZ92kfuYJ0=
 			</data>
 			<key>hash2</key>
 			<data>
-			0vqHXUYd/sNFt9aJg9sssYHxlj4zwnrd+vu3MT3C0kg=
+			cuHcFlEDXDwdV24Hz2gwjEvVkbNKbuo9p+QyFd+b7V8=
 			</data>
 		</dict>
 		<key>IMSurveyScript.js</key>
@@ -95,55 +95,55 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			vX3li+0pmJfxIOleJRvM7XzulwQ=
+			jgDTGDB4SyyP+sUsAbgwBsiTmKQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			4jL5SYsuUZwVrVKRBF0W93GFHjdKVzLWV5emq9vS8g4=
+			wkmbEuO887HM2Lnl6rrGNrxQEt+wIt0cQ9tG2EMTl+E=
 			</data>
 		</dict>
 		<key>Modules/InMoment.swiftmodule/arm.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			p7Am25dSrgH79YsLSNQE3wIRaaI=
+			5tEDwXxuzskH+JY2CKnTgIyOSjY=
 			</data>
 			<key>hash2</key>
 			<data>
-			XQOYwOkvIq0b7r7KsFI0TtEsigRHcQSLSoxPz/m1Uyo=
+			HLDGeA3GZWLjCRNvrT3b6QzsckUqtepicpEhIAJAPdc=
 			</data>
 		</dict>
 		<key>Modules/InMoment.swiftmodule/arm64.swiftdoc</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			7BUlQBrhUQ77wbgVsUxliml4eHA=
+			8IiaWDYO2W0A68WzZ1EsKZFJ6j8=
 			</data>
 			<key>hash2</key>
 			<data>
-			HsTmECpPnCMRxnb73uLJ1+KT7c6FmxT04MLIAz3OSiA=
+			iMZRq3VzmsvMDR5oxZB651imyAoqklsc/2a0DGB1xhs=
 			</data>
 		</dict>
 		<key>Modules/InMoment.swiftmodule/arm64.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			ZUzP6FmeuAYixTfXZo82Lx/LAtg=
+			aj1oU/7hxMeTnkybz3O2uzqBEFc=
 			</data>
 			<key>hash2</key>
 			<data>
-			eIjIeK60iLyOO7cIzjY8czN8caJTeRirzv4Kv2nUuic=
+			OadHAuPviNqiYuw1J1O3TvVVkWsB2WkebasYWnAriOk=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			/XeWJsgawxcRYSmakXvNrt4+JFA=
+			ce+u05jIBCv7yFxAwe5uGd+8TzU=
 			</data>
 			<key>hash2</key>
 			<data>
-			Buval0OMSiJBybxP3sXZGznnlP5XJS1qNI3nzRttjH0=
+			SwPEC9TowyZ+VnuZEz4BPDfWu/xM/06LAnDK4osIst0=
 			</data>
 		</dict>
 	</dict>

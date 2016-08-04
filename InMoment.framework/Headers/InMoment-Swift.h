@@ -92,6 +92,7 @@ typedef int swift_int4  __attribute__((__ext_vector_type__(4)));
 # endif
 #endif
 #if defined(__has_feature) && __has_feature(modules)
+@import CoreLocation;
 @import ObjectiveC;
 @import UIKit;
 @import Foundation;
@@ -99,21 +100,33 @@ typedef int swift_int4  __attribute__((__ext_vector_type__(4)));
 
 #pragma clang diagnostic ignored "-Wproperty-attribute-mismatch"
 #pragma clang diagnostic ignored "-Wduplicate-method-arg"
+
+@interface CLBeaconRegion (SWIFT_EXTENSION(InMoment))
+@property (nonatomic, readonly, copy) NSString * _Nonnull description;
+@end
+
+
+@interface CLCircularRegion (SWIFT_EXTENSION(InMoment))
+@property (nonatomic, readonly, copy) NSString * _Nonnull description;
+@end
+
 @protocol InMomentSurveyDelegate;
-@class UIColor;
+@class UILocalNotification;
 
 SWIFT_CLASS("_TtC8InMoment8InMoment")
 @interface InMoment : NSObject
-+ (void)presentSurveyModallyUsingGateway:(NSString * _Nonnull)gateway withParameters:(NSDictionary<NSString *, NSString *> * _Nonnull)parameters delegate:(id <InMomentSurveyDelegate> _Nonnull)delegate presentationStyle:(UIModalPresentationStyle)presentationStyle navigationBarStyle:(UIBarStyle)navigationBarStyle navigationBarTintColor:(UIColor * _Nonnull)navigationBarTintColor progressBarColor:(UIColor * _Nonnull)progressBarColor;
-+ (void)presentSurveyModallyUsingGateway:(NSString * _Nonnull)gateway withParameters:(NSDictionary<NSString *, NSString *> * _Nonnull)parameters delegate:(id <InMomentSurveyDelegate> _Nonnull)delegate presentationStyle:(UIModalPresentationStyle)presentationStyle;
++ (void)initialize:(NSString * _Nonnull)apiKey surveyDelegate:(id <InMomentSurveyDelegate> _Nonnull)surveyDelegate;
++ (void)didReceiveLocalNotification:(UILocalNotification * _Nonnull)notification;
++ (void)presentSurveyModallyWithGateway:(NSString * _Nonnull)gateway parameters:(NSDictionary<NSString *, NSString *> * _Nonnull)parameters delegate:(id <InMomentSurveyDelegate> _Nonnull)delegate presentationStyle:(UIModalPresentationStyle)presentationStyle;
 @end
 
+@class UIViewController;
 
 SWIFT_PROTOCOL("_TtP8InMoment14InMomentSurvey_")
 @protocol InMomentSurvey
 - (void)dismiss;
 - (void)startOver;
-- (void)alert:(NSString * _Nullable)title message:(NSString * _Nullable)message okButtonText:(NSString * _Nonnull)okButtonText handler:(void (^ _Nullable)(void))handler;
+- (void)presentViewController:(UIViewController * _Nonnull)viewControllerToPresent animated:(BOOL)flag completion:(void (^ _Nullable)(void))completion;
 @end
 
 @class NSError;
@@ -132,6 +145,10 @@ SWIFT_PROTOCOL("_TtP8InMoment22InMomentSurveyDelegate_")
 @end
 
 
+@interface NSDate (SWIFT_EXTENSION(InMoment))
+@end
+
+
 @interface NSDictionary (SWIFT_EXTENSION(InMoment))
 @end
 
@@ -140,11 +157,20 @@ SWIFT_PROTOCOL("_TtP8InMoment22InMomentSurveyDelegate_")
 @end
 
 
+@interface NSNumber (SWIFT_EXTENSION(InMoment))
+@end
+
+
 @interface UIAlertController (SWIFT_EXTENSION(InMoment))
 @end
 
 
 @interface UIImage (SWIFT_EXTENSION(InMoment))
+@end
+
+
+@interface UILocalNotification (SWIFT_EXTENSION(InMoment))
+@property (nonatomic, readonly) BOOL isFromInMoment;
 @end
 
 
