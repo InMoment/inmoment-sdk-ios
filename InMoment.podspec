@@ -19,6 +19,7 @@ Pod::Spec.new do |s|
     s.source       = { :git => "https://github.com/InMoment/feedbackkit-ios.git", :tag => "v#{s.version}" }
     s.preserve_paths = "*.framework"
     s.vendored_frameworks  = "*.framework"
+    s.frameworks = "CoreLocation", "UIKit"
     s.requires_arc = true
     
     s.frameworks = "UIKit"
