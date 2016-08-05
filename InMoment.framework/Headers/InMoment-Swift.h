@@ -110,6 +110,10 @@ typedef int swift_int4  __attribute__((__ext_vector_type__(4)));
 @property (nonatomic, readonly, copy) NSString * _Nonnull description;
 @end
 
+
+@interface CLRegion (SWIFT_EXTENSION(InMoment))
+@end
+
 @protocol InMomentSurveyDelegate;
 @class UILocalNotification;
 
@@ -129,11 +133,13 @@ SWIFT_PROTOCOL("_TtP8InMoment14InMomentSurvey_")
 - (void)presentViewController:(UIViewController * _Nonnull)viewControllerToPresent animated:(BOOL)flag completion:(void (^ _Nullable)(void))completion;
 @end
 
+@class WebSurveyConfiguration;
 @class NSError;
 
 SWIFT_PROTOCOL("_TtP8InMoment22InMomentSurveyDelegate_")
 @protocol InMomentSurveyDelegate
 @optional
+@property (nonatomic, readonly, strong) WebSurveyConfiguration * _Nonnull webSurveyConfiguration;
 - (void)didPassCompletionPointInSurvey:(id <InMomentSurvey> _Nonnull)survey;
 @required
 - (void)didRecieveErrorLoadingSurvey:(id <InMomentSurvey> _Nonnull)survey error:(NSError * _Nonnull)error;
@@ -180,6 +186,16 @@ SWIFT_PROTOCOL("_TtP8InMoment22InMomentSurveyDelegate_")
 
 
 @interface UIView (SWIFT_EXTENSION(InMoment))
+@end
+
+@class UIColor;
+
+SWIFT_CLASS("_TtC8InMoment22WebSurveyConfiguration")
+@interface WebSurveyConfiguration : NSObject
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@property (nonatomic) UIBarStyle navigationBarStyle;
+@property (nonatomic, strong) UIColor * _Nonnull navigationBarTintColor;
+@property (nonatomic, strong) UIColor * _Nonnull progressBarColor;
 @end
 
 #pragma clang diagnostic pop

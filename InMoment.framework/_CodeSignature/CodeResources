@@ -6,11 +6,11 @@
 	<dict>
 		<key>Assets.car</key>
 		<data>
-		uNSr+ASljDMKiU8WFBr3vj0xhco=
+		PCrK5t1HoJF9bMBPtUAgEx5lEsg=
 		</data>
 		<key>Headers/InMoment-Swift.h</key>
 		<data>
-		+/4mrErt4klzoRMxvEZTScEiG/8=
+		HHJhic1hKqVqjwQ6J3rtkm45egA=
 		</data>
 		<key>Headers/InMoment.h</key>
 		<data>
@@ -22,7 +22,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		XdW48RJl1R+pFbsBcmoVs2gcTyw=
+		mERFBVzS4jpROCzKfM1pUW3wt4c=
 		</data>
 		<key>Modules/InMoment.swiftmodule/arm.swiftdoc</key>
 		<data>
@@ -30,7 +30,7 @@
 		</data>
 		<key>Modules/InMoment.swiftmodule/arm.swiftmodule</key>
 		<data>
-		5tEDwXxuzskH+JY2CKnTgIyOSjY=
+		6d2g3dJyvLRSdDKQ5m9xe0f/JR4=
 		</data>
 		<key>Modules/InMoment.swiftmodule/arm64.swiftdoc</key>
 		<data>
@@ -38,7 +38,7 @@
 		</data>
 		<key>Modules/InMoment.swiftmodule/arm64.swiftmodule</key>
 		<data>
-		aj1oU/7hxMeTnkybz3O2uzqBEFc=
+		Hj/Jpr6sjSMgdrd3aANWK0t8aNk=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -51,22 +51,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			uNSr+ASljDMKiU8WFBr3vj0xhco=
+			PCrK5t1HoJF9bMBPtUAgEx5lEsg=
 			</data>
 			<key>hash2</key>
 			<data>
-			ZSXjWDIe7JNkHXLyxgb/cJgLleJDOrTfyCIWQX6aDA8=
+			XFrTCvK2urYcHOT06//nApcSG8wKsTSgDDzJJejs3iQ=
 			</data>
 		</dict>
 		<key>Headers/InMoment-Swift.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			+/4mrErt4klzoRMxvEZTScEiG/8=
+			HHJhic1hKqVqjwQ6J3rtkm45egA=
 			</data>
 			<key>hash2</key>
 			<data>
-			4M06l1PL+/tSpp/Q34zI+SGpGHZ406wD8jGTsmSQB2k=
+			NA9ttxp5wGamEJxPSLMlh+hVGdP+GanXigpscL8Mz/o=
 			</data>
 		</dict>
 		<key>Headers/InMoment.h</key>
@@ -106,11 +106,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			5tEDwXxuzskH+JY2CKnTgIyOSjY=
+			6d2g3dJyvLRSdDKQ5m9xe0f/JR4=
 			</data>
 			<key>hash2</key>
 			<data>
-			HLDGeA3GZWLjCRNvrT3b6QzsckUqtepicpEhIAJAPdc=
+			5e6QXAv+v1cRUAvNqexbAvLGXxFbZk+1JyW6U6vzrl4=
 			</data>
 		</dict>
 		<key>Modules/InMoment.swiftmodule/arm64.swiftdoc</key>
@@ -128,11 +128,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			aj1oU/7hxMeTnkybz3O2uzqBEFc=
+			Hj/Jpr6sjSMgdrd3aANWK0t8aNk=
 			</data>
 			<key>hash2</key>
 			<data>
-			OadHAuPviNqiYuw1J1O3TvVVkWsB2WkebasYWnAriOk=
+			C1QkcD7arzwcY9kbfoUg1EMBNYxp1zXBfuerhp6ze50=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
