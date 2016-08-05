@@ -71,7 +71,7 @@ This method is called when the user arrives at the page immediately following th
 Just add the following line to your ```Podfile```:
 
 ```ruby
-pod 'InMomentFeedbackKit'
+pod 'InMoment'
 ```
     
 ### Manual Installation
