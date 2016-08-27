@@ -103,8 +103,6 @@ typedef int swift_int4  __attribute__((__ext_vector_type__(4)));
 
 SWIFT_CLASS("_TtC8InMoment8InMoment")
 @interface InMoment : NSObject
-+ (NSString * _Nonnull)_test;
-+ (void)set_test:(NSString * _Nonnull)value;
 + (void)presentSurveyUsingGateway:(NSString * _Nonnull)gateway withParameters:(NSDictionary<NSString *, NSString *> * _Nonnull)parameters delegate:(id <InMomentSurveyDelegate> _Nonnull)delegate;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
