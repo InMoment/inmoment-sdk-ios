@@ -92,7 +92,6 @@ typedef int swift_int4  __attribute__((__ext_vector_type__(4)));
 # endif
 #endif
 #if defined(__has_feature) && __has_feature(modules)
-@import CoreLocation;
 @import ObjectiveC;
 @import UIKit;
 @import Foundation;
@@ -100,28 +99,35 @@ typedef int swift_int4  __attribute__((__ext_vector_type__(4)));
 
 #pragma clang diagnostic ignored "-Wproperty-attribute-mismatch"
 #pragma clang diagnostic ignored "-Wduplicate-method-arg"
-
-@interface CLBeaconRegion (SWIFT_EXTENSION(InMoment))
-@property (nonatomic, readonly, copy) NSString * _Nonnull description;
-@end
-
-
-@interface CLCircularRegion (SWIFT_EXTENSION(InMoment))
-@property (nonatomic, readonly, copy) NSString * _Nonnull description;
-@end
-
-
-@interface CLRegion (SWIFT_EXTENSION(InMoment))
-@end
-
 @protocol InMomentSurveyDelegate;
-@class UILocalNotification;
 
 SWIFT_CLASS("_TtC8InMoment8InMoment")
 @interface InMoment : NSObject
-+ (void)initialize:(NSString * _Nonnull)apiKey surveyDelegate:(id <InMomentSurveyDelegate> _Nonnull)surveyDelegate;
-+ (void)didReceiveLocalNotification:(UILocalNotification * _Nonnull)notification;
-+ (void)presentSurveyModallyWithGateway:(NSString * _Nonnull)gateway parameters:(NSDictionary<NSString *, NSString *> * _Nonnull)parameters delegate:(id <InMomentSurveyDelegate> _Nonnull)delegate presentationStyle:(UIModalPresentationStyle)presentationStyle;
++ (void)presentSurveyUsingGateway:(NSString * _Nonnull)gateway withParameters:(NSDictionary<NSString *, NSString *> * _Nonnull)parameters delegate:(id <InMomentSurveyDelegate> _Nonnull)delegate;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+@protocol InMomentSurvey;
+@class NSError;
+@class UIColor;
+enum LoadingViewStyle : NSInteger;
+
+SWIFT_PROTOCOL("_TtP8InMoment22InMomentSurveyDelegate_")
+@protocol InMomentSurveyDelegate
+- (void)surveyWithDidRecieveErrorWhileLoading:(id <InMomentSurvey> _Nonnull)survey error:(NSError * _Nonnull)error;
+- (void)surveyWithDidArriveAtLastPageOfSurvey:(id <InMomentSurvey> _Nonnull)survey;
+@optional
+- (void)surveyWithDidPassCompletionPointInSurvey:(id <InMomentSurvey> _Nonnull)survey;
+- (UIModalPresentationStyle)preferredWebSurveyModalPresentationStyle;
+- (UIBarStyle)preferredWebSurveyNavigationBarStyle;
+- (UIColor * _Nonnull)preferredWebSurveyNavigationBarTintColor;
+- (UIColor * _Nonnull)preferredWebSurveyProgressBarColor;
+- (enum LoadingViewStyle)preferredWebSurveyLoadingViewStyle;
+@end
+
+
+SWIFT_PROTOCOL("_TtP8InMoment19InMomentAppDelegate_")
+@protocol InMomentAppDelegate <InMomentSurveyDelegate>
 @end
 
 @class UIViewController;
@@ -130,21 +136,17 @@ SWIFT_PROTOCOL("_TtP8InMoment14InMomentSurvey_")
 @protocol InMomentSurvey
 - (void)dismiss;
 - (void)startOver;
+- (void)presentAlertWithTitle:(NSString * _Nullable)title message:(NSString * _Nullable)message buttonText:(NSString * _Nonnull)buttonText buttonAction:(void (^ _Nonnull)(void))buttonAction;
 - (void)presentViewController:(UIViewController * _Nonnull)viewControllerToPresent animated:(BOOL)flag completion:(void (^ _Nullable)(void))completion;
 @end
 
-@class WebSurveyConfiguration;
-@class NSError;
 
-SWIFT_PROTOCOL("_TtP8InMoment22InMomentSurveyDelegate_")
-@protocol InMomentSurveyDelegate
-@optional
-@property (nonatomic, readonly, strong) WebSurveyConfiguration * _Nonnull webSurveyConfiguration;
-- (void)didPassCompletionPointInSurvey:(id <InMomentSurvey> _Nonnull)survey;
-@required
-- (void)didRecieveErrorLoadingSurvey:(id <InMomentSurvey> _Nonnull)survey error:(NSError * _Nonnull)error;
-- (void)didArriveAtLastPageOfSurvey:(id <InMomentSurvey> _Nonnull)survey;
-@end
+typedef SWIFT_ENUM(NSInteger, LoadingViewStyle) {
+  LoadingViewStyleLightGreen = 0,
+  LoadingViewStyleLightGray = 1,
+  LoadingViewStyleDark = 2,
+  LoadingViewStyleGrayOpaque = 3,
+};
 
 
 @interface NSBundle (SWIFT_EXTENSION(InMoment))
@@ -155,7 +157,7 @@ SWIFT_PROTOCOL("_TtP8InMoment22InMomentSurveyDelegate_")
 @end
 
 
-@interface NSDictionary (SWIFT_EXTENSION(InMoment))
+@interface NSError (SWIFT_EXTENSION(InMoment))
 @end
 
 
@@ -163,20 +165,7 @@ SWIFT_PROTOCOL("_TtP8InMoment22InMomentSurveyDelegate_")
 @end
 
 
-@interface NSNumber (SWIFT_EXTENSION(InMoment))
-@end
-
-
-@interface UIAlertController (SWIFT_EXTENSION(InMoment))
-@end
-
-
 @interface UIImage (SWIFT_EXTENSION(InMoment))
-@end
-
-
-@interface UILocalNotification (SWIFT_EXTENSION(InMoment))
-@property (nonatomic, readonly) BOOL isFromInMoment;
 @end
 
 
@@ -186,16 +175,6 @@ SWIFT_PROTOCOL("_TtP8InMoment22InMomentSurveyDelegate_")
 
 
 @interface UIView (SWIFT_EXTENSION(InMoment))
-@end
-
-@class UIColor;
-
-SWIFT_CLASS("_TtC8InMoment22WebSurveyConfiguration")
-@interface WebSurveyConfiguration : NSObject
-- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
-@property (nonatomic) UIBarStyle navigationBarStyle;
-@property (nonatomic, strong) UIColor * _Nonnull navigationBarTintColor;
-@property (nonatomic, strong) UIColor * _Nonnull progressBarColor;
 @end
 
 #pragma clang diagnostic pop

@@ -2,7 +2,7 @@
 //  InMoment.h
 //  InMoment
 //
-//  Created by Kyler Jensen on 8/3/16.
+//  Created by Kyler Jensen on 8/17/16.
 //  Copyright © 2016 InMoment, Inc. All rights reserved.
 //
 

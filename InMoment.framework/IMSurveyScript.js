@@ -61,20 +61,20 @@
 		return;
 	}
 	if(typeof angular === "undefined" || !angular) {
-		postErrorMessage("AngularJS is not defined.", "Please contact InMoment technical support.");
+		postErrorMessage("AngularJS is not defined.");
 		return;
 	}
 	scope = angular.element(document.body).scope();
 	if(!scope) {
-		postErrorMessage("Could not initialize scope.", "Please contact InMoment technical support.");
+		postErrorMessage("Could not initialize scope.");
 		return;
 	}
 	else if(typeof scope.surveyOver === "undefined") {
-		postErrorMessage("Could not determine if survey is over.", "Please contact InMoment technical support.");
+		postErrorMessage("Could not determine if survey is over.");
 		return;
 	}
 	else if(typeof scope.currentPageIndex === "undefined") {
-		postErrorMessage("Could not determine current page index.", "Please contact InMoment technical support.");
+		postErrorMessage("Could not determine current page index.");
 		return;
 	}
     else {
