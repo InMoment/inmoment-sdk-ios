@@ -21,17 +21,17 @@ class ViewController: UIViewController, InMomentSurveyDelegate {
         InMoment.presentSurveyModally(usingGateway: "MySurveyGateway", delegate: self)
     }
     
-    func didRecieveErrorLoadingSurvey(survey: InMomentSurvey, error: NSError) {
+    func survey(didRecieveErrorWhileLoading survey: InMomentSurvey, error: NSError) {
         //Insert your own code here. This method is required.
         survey.dismiss()
     }
   
-    func didArriveAtLastPageOfSurvey(survey: InMomentSurvey) {
+    func survey(didArriveAtLastPageOfSurvey survey: InMomentSurvey) {
         //Insert your own code here. This method is required.
         survey.dismiss()
     }
     
-    func didPassCompletionPointInSurvey(survey: InMomentSurvey) {
+    func survey(didPassCompletionPointInSurvey survey: InMomentSurvey) {
         //Insert your own code here. This method is optional.
     }
   
@@ -44,25 +44,38 @@ class ViewController: UIViewController, InMomentSurveyDelegate {
 //class InMoment
 public static func presentSurveyModally(usingGateway gateway: String, 
                                       withParameters parameters: [String:String] = [:],
-                                                     delegate: InMomentSurveyDelegate, 
-                                                     presentationStyle: UIModalPresentationStyle = .PageSheet)
+                                                     delegate: InMomentSurveyDelegate)
 ```
 
 Calling this method presents a survey modally using the given ```presentationStyle```.
 - ```usingGateway``` ```gateway``` (required): A valid InMoment web survey gateway. Ask your CSM or operations specialist for details.
 - ```withParameters``` ```parameters``` (optional): A dictionary of strings corresponding to survey URL parameters.
 - ```delegate``` (required): A reference to an implementation of ```InMomentSurveyDelegate```.
-- ```presentationStyle``` (optional): The desired ```UIModalPresentationStyle```. Defaults to: ```.PageSheet```.
 
 
 ### Recording survey completion
 
 ```swift
 //protocol InMomentSurveyDelegate
-optional func didPassCompletionPointInSurvey(survey: InMomentSurvey)
+optional func survey(didPassCompletionPointInSurvey survey: InMomentSurvey)
 ```
   
-This method is called when the user arrives at the page immediately following the survey completion point. Once this happens, the survey response will be available in InMoment reports and in Focus™, (even if the user doesn't continue until the very last page of the survey). Use this method to perform actions such as recording that the user has finished taking the survey or giving the user a reward.
+This method is called when the user arrives at the page immediately following the survey completion point. Once this happens, the survey response will be available in InMoment reports and in Hub 2.0™, (even if the user doesn't continue until the very last page of the survey). Use this method to perform actions such as recording that the user has finished taking the survey or giving the user a reward.
+
+### Customizing survey appearance
+
+The following methods can be implemented to customize the appearance of the survey view controller:
+
+```swift
+//protocol InMomentSurveyDelegate
+optional func preferredWebSurveyModalPresentationStyle() -> UIModalPresentationStyle
+optional func preferredWebSurveyNavigationBarStyle() -> UIBarStyle
+optional func preferredWebSurveyNavigationBarTintColor() -> UIColor
+optional func preferredWebSurveyProgressBarColor() -> UIColor
+optional func preferredWebSurveyLoadingViewStyle() -> LoadingViewStyle
+```
+
+
 
 ## Installation
 
@@ -71,14 +84,24 @@ This method is called when the user arrives at the page immediately following th
 Just add the following line to your ```Podfile```:
 
 ```ruby
-pod 'InMoment'
+pod 'InMoment', '~> 0.4'
 ```
-    
+
+### Installation via Carthage
+
+Just add the following line to your ```Cartfile```:
+
+```ruby
+github 'InMoment\inmoment-sdk-ios' ~> 0.4
+```
+
 ### Manual Installation
 
 1. [Download](https://www.github.com/InMoment/inmoment-sdk/releases/latest) and unzip the latest release.
+2. InMoment requires Mixpanel as a dependency. [Download](https://github.com/mixpanel/mixpanel-swift/releases/tag/v1.0.0) and unzip the latest release.
 2. Drag ```InMomentFeedbackKit.framework``` into your Xcode project and choose "Copy if needed".
-3. Click the ```+``` in the ```Embedded Binaries``` section of your application's target, and select ```InMomentFeedbackKit.framework```.
+4. Drag ```Mixpanel.framework``` into your Xcode project and choose "Copy if needed".
+3. Click the ```+``` in the ```Embedded Binaries``` section of your application's target, and select ```InMomentFeedbackKit.framework``` and ```Mixpanel.framework```.
 3. Add a "Run Script" build phase after "Embed Frameworks". Copy and paste the following script:
 
     ```bash
