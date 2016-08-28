@@ -2,7 +2,7 @@
 Pod::Spec.new do |s|
 
     s.name         = "InMoment"
-    s.version      = "0.3.18"
+    s.version      = "0.3.19"
     s.summary      = "Lauch and interact with InMoment web surveys."
 
     s.description  = <<-DESC
@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
     s.author       = { "InMoment, Inc." => "mobile-development@inmoment.com" }
     s.platform     = :ios, "8.0"
     
-    s.source       = { :git => "https://github.com/InMoment/.git", :tag => "v#{s.version}" }
+    s.source       = { :git => "https://github.com/InMoment/inmoment-sdk-ios.git", :tag => "v#{s.version}" }
     s.preserve_paths = "*.framework"
     s.vendored_frameworks  = "*.framework"
     s.requires_arc = true
