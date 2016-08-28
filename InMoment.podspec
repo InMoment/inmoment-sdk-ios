@@ -2,7 +2,7 @@
 Pod::Spec.new do |s|
 
     s.name         = "InMoment"
-    s.version      = "0.3.19"
+    s.version      = "0.3.20"
     s.summary      = "Lauch and interact with InMoment web surveys."
 
     s.description  = <<-DESC
@@ -22,6 +22,6 @@ Pod::Spec.new do |s|
     s.requires_arc = true
     s.frameworks = "CoreLocation", "UIKit"
     
-    s.dependency "mixpanel-swift", "~>1.0"
+    s.dependency "Mixpanel", "~>1.0"
 
 end
