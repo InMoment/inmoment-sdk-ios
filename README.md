@@ -1,5 +1,6 @@
 # InMoment SDK (iOS) (Beta)
-
+InMoment is a simple framework giving client developers the ability to
+launch and interact with InMoment web surveys.
 **NOTE: This software is still in beta and is subject to change.**
 
 ## Screenshots
@@ -52,8 +53,8 @@ public static func presentSurveyModally(usingGateway gateway: String,
 ```
 
 Calling this method presents a survey modally using the given ```presentationStyle```.
-- ```usingGateway``` ```gateway``` (required): A valid InMoment web survey gateway. Ask your CSM or operations specialist for details.
-- ```withParameters``` ```parameters``` (optional): A dictionary of strings corresponding to survey URL parameters.
+- ```gateway``` (required): A valid InMoment web survey gateway. Ask your CSM or operations specialist for details.
+- ```parameters``` (optional): A dictionary of strings corresponding to survey URL parameters.
 - ```delegate``` (required): A reference to an implementation of ```InMomentSurveyDelegate```.
 
 ### Recording survey completion
