@@ -107,7 +107,16 @@ SWIFT_CLASS("_TtC8InMoment8InMoment")
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
-@protocol InMomentSurvey;
+@class UIViewController;
+
+SWIFT_PROTOCOL("_TtP8InMoment14InMomentSurvey_")
+@protocol InMomentSurvey
+- (void)dismiss;
+- (void)startOver;
+- (void)presentAlertWithTitle:(NSString * _Nullable)title message:(NSString * _Nullable)message buttonText:(NSString * _Nonnull)buttonText buttonAction:(void (^ _Nullable)(void))buttonAction;
+- (void)presentViewController:(UIViewController * _Nonnull)viewControllerToPresent animated:(BOOL)flag completion:(void (^ _Nullable)(void))completion;
+@end
+
 @class NSError;
 @class UIColor;
 enum LoadingViewStyle : NSInteger;
@@ -124,22 +133,6 @@ SWIFT_PROTOCOL("_TtP8InMoment22InMomentSurveyDelegate_")
 - (UIColor * _Nonnull)preferredWebSurveyProgressBarColor;
 - (enum LoadingViewStyle)preferredWebSurveyLoadingViewStyle;
 @end
-
-
-SWIFT_PROTOCOL("_TtP8InMoment19InMomentAppDelegate_")
-@protocol InMomentAppDelegate <InMomentSurveyDelegate>
-@end
-
-@class UIViewController;
-
-SWIFT_PROTOCOL("_TtP8InMoment14InMomentSurvey_")
-@protocol InMomentSurvey
-- (void)dismiss;
-- (void)startOver;
-- (void)presentAlertWithTitle:(NSString * _Nullable)title message:(NSString * _Nullable)message buttonText:(NSString * _Nonnull)buttonText buttonAction:(void (^ _Nonnull)(void))buttonAction;
-- (void)presentViewController:(UIViewController * _Nonnull)viewControllerToPresent animated:(BOOL)flag completion:(void (^ _Nullable)(void))completion;
-@end
-
 
 typedef SWIFT_ENUM(NSInteger, LoadingViewStyle) {
   LoadingViewStyleLightGreen = 0,
