@@ -25,7 +25,7 @@ class ViewController: UIViewController, InMomentSurveyDelegate {
 
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
-        InMoment.presentSurveyModally(usingGateway: "MySurveyGateway", delegate: self)
+        InMoment.presentSurvey(usingGateway: "MySurveyGateway", delegate: self)
     }
     
     func survey(didRecieveErrorWhileLoading survey: InMomentSurvey, error: NSError) {
@@ -49,9 +49,9 @@ class ViewController: UIViewController, InMomentSurveyDelegate {
 
 ```swift
 //class InMoment
-public static func presentSurveyModally(usingGateway gateway: String, 
-                                      withParameters parameters: [String:String] = [:],
-                                                     delegate: InMomentSurveyDelegate)
+public static func presentSurvey(usingGateway gateway: String, 
+                               withParameters parameters: [String:String] = [:],
+                                              delegate: InMomentSurveyDelegate)
 ```
 
 Calling this method presents a survey modally using the given ```presentationStyle```.
