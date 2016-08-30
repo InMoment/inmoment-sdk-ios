@@ -96,7 +96,7 @@ pod 'InMoment'
 1. Add the following line to your ```Cartfile```:
 
 ```ruby
-github 'InMoment\inmoment-sdk-ios'
+github 'InMoment/inmoment-sdk-ios'
 ```
 
 2. Run ```carthage bootstrap``` or ```carthage update```.
