@@ -6,6 +6,8 @@ launch and interact with InMoment web surveys.
 ## Screenshots
 
 ![presentsurvey_fl](https://cloud.githubusercontent.com/assets/15389109/18068072/e5e2c70e-6dfc-11e6-85fa-c7e60301b89b.gif)
+![completionpoint_fl](https://cloud.githubusercontent.com/assets/15389109/18071937/d83ad6c2-6e16-11e6-8a3d-c49935905410.gif)
+![lastpage_fl](https://cloud.githubusercontent.com/assets/15389109/18071939/dac98abe-6e16-11e6-909b-b976b6a84864.gif)
 
 ## System Requirements
 
