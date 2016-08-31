@@ -3,12 +3,6 @@ InMoment is a simple framework giving client developers the ability to
 launch and interact with InMoment web surveys.
 **NOTE: This software is still in beta and is subject to change.**
 
-## Screenshots
-
-![presentsurvey_fl](https://cloud.githubusercontent.com/assets/15389109/18068072/e5e2c70e-6dfc-11e6-85fa-c7e60301b89b.gif)
-![completionpoint_fl](https://cloud.githubusercontent.com/assets/15389109/18071937/d83ad6c2-6e16-11e6-8a3d-c49935905410.gif)
-![lastpage_fl](https://cloud.githubusercontent.com/assets/15389109/18071939/dac98abe-6e16-11e6-909b-b976b6a84864.gif)
-
 ## System Requirements
 
 - **Xcode 7.3.1** and **Swift 2.2** (the latest stable versions). Apps that include this framework may not build properly if older versions of Xcode or Swift are used.
