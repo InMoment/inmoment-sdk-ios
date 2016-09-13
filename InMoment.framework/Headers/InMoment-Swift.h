@@ -123,10 +123,10 @@ enum LoadingViewStyle : NSInteger;
 
 SWIFT_PROTOCOL("_TtP8InMoment22InMomentSurveyDelegate_")
 @protocol InMomentSurveyDelegate
-- (void)surveyWithDidRecieveErrorWhileLoading:(id <InMomentSurvey> _Nonnull)survey error:(NSError * _Nonnull)error;
-- (void)surveyWithDidArriveAtLastPageOfSurvey:(id <InMomentSurvey> _Nonnull)survey;
+- (void)didArriveAtLastPageOfSurvey:(id <InMomentSurvey> _Nonnull)survey;
+- (void)didRecieveErrorWhileLoadingSurvey:(id <InMomentSurvey> _Nonnull)survey error:(NSError * _Nonnull)error;
 @optional
-- (void)surveyWithDidPassCompletionPointInSurvey:(id <InMomentSurvey> _Nonnull)survey;
+- (void)didPassCompletionPointInSurvey:(id <InMomentSurvey> _Nonnull)survey;
 - (UIModalPresentationStyle)preferredWebSurveyModalPresentationStyle;
 - (UIBarStyle)preferredWebSurveyNavigationBarStyle;
 - (UIColor * _Nonnull)preferredWebSurveyNavigationBarTintColor;
