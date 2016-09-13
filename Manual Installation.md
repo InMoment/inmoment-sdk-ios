@@ -3,7 +3,7 @@
 1. [Download](https://www.github.com/InMoment/inmoment-sdk/releases/latest) and unzip the latest release.
 2. Drag ```InMomentFeedbackKit.framework``` into your Xcode project and choose "Copy if needed".
 3. Click the ```+``` in the ```Embedded Binaries``` section of your application's target, and select ```InMomentFeedbackKit.framework```.
-4. Do the same for each of the framework's dependencies (listed in the Cartfile).
+4. Do the same for each of the framework's dependencies (listed in the Cartfile). You will have to visit the GitHub repo for each dependency and follow their download and installation instructions.
 5. Add a "Run Script" build phase after "Embed Frameworks". Copy and paste the following script:
 
     ```bash
