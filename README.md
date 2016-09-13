@@ -28,17 +28,17 @@ class ViewController: UIViewController, InMomentSurveyDelegate {
         InMoment.presentSurvey(usingGateway: "MySurveyGateway", delegate: self)
     }
     
-    func survey(didRecieveErrorWhileLoading survey: InMomentSurvey, error: NSError) {
+    func didRecieveErrorWhileLoadingSurvey(survey: InMomentSurvey, error: NSError) {
         //Insert your own code here. This method is required.
         survey.dismiss()
     }
   
-    func survey(didArriveAtLastPageOfSurvey survey: InMomentSurvey) {
+    func didArriveAtLastPageOfSurvey(survey: InMomentSurvey) {
         //Insert your own code here. This method is required.
         survey.dismiss()
     }
     
-    func survey(didPassCompletionPointInSurvey survey: InMomentSurvey) {
+    func didPassCompletionPointInSurvey(survey: InMomentSurvey) {
         //Insert your own code here. This method is optional.
     }
   
@@ -63,7 +63,7 @@ Calling this method presents a survey modally using the given ```presentationSty
 
 ```swift
 //protocol InMomentSurveyDelegate
-optional func survey(didPassCompletionPointInSurvey survey: InMomentSurvey)
+optional func didPassCompletionPointInSurvey(survey: InMomentSurvey)
 ```
   
 This method is called when the user arrives at the page immediately following the survey completion point. Once this happens, the survey response will be available in InMoment reports and in Focus™, (even if the user doesn't continue until the very last page of the survey). Use this method to perform actions such as recording that the user has finished taking the survey or giving the user a reward.
@@ -106,40 +106,4 @@ github 'InMoment/inmoment-sdk-ios'
     
 ### Manual Installation
 
-1. [Download](https://www.github.com/InMoment/inmoment-sdk/releases/latest) and unzip the latest release.
-2. Drag ```InMomentFeedbackKit.framework``` into your Xcode project and choose "Copy if needed".
-3. Click the ```+``` in the ```Embedded Binaries``` section of your application's target, and select ```InMomentFeedbackKit.framework```.
-4. Do the same for each of the framework's dependencies (listed in the Cartfile).
-5. Add a "Run Script" build phase after "Embed Frameworks". Copy and paste the following script:
-
-    ```bash
-    APP_PATH="${TARGET_BUILD_DIR}/${WRAPPER_NAME}"
-
-    # This script loops through the frameworks embedded in the application and
-    # removes unused architectures.
-    find "$APP_PATH" -name '*.framework' -type d | while read -r FRAMEWORK
-    do
-        FRAMEWORK_EXECUTABLE_NAME=$(defaults read "$FRAMEWORK/Info.plist" CFBundleExecutable)
-        FRAMEWORK_EXECUTABLE_PATH="$FRAMEWORK/$FRAMEWORK_EXECUTABLE_NAME"
-        echo "Executable is $FRAMEWORK_EXECUTABLE_PATH"
-    
-        EXTRACTED_ARCHS=()
-    
-        for ARCH in $ARCHS
-        do
-            echo "Extracting $ARCH from $FRAMEWORK_EXECUTABLE_NAME"
-            lipo -extract "$ARCH" "$FRAMEWORK_EXECUTABLE_PATH" -o "$FRAMEWORK_EXECUTABLE_PATH-$ARCH"
-            EXTRACTED_ARCHS+=("$FRAMEWORK_EXECUTABLE_PATH-$ARCH")
-        done
-    
-        echo "Merging extracted architectures: ${ARCHS}"
-        lipo -o "$FRAMEWORK_EXECUTABLE_PATH-merged" -create "${EXTRACTED_ARCHS[@]}"
-        rm "${EXTRACTED_ARCHS[@]}"
-    
-        echo "Replacing original executable with thinned version"
-        rm "$FRAMEWORK_EXECUTABLE_PATH"
-        mv "$FRAMEWORK_EXECUTABLE_PATH-merged" "$FRAMEWORK_EXECUTABLE_PATH"
-    
-    done
-    ```
-    Credit: [Daniel Kennett](http://stackoverflow.com/users/29005/ikenndac). This is a workaround for a bug in Xcode 7 that prevents users from uploading apps referencing frameworks that contain simulator slices to iTunes Connect [(click here to learn more)](http://ikennd.ac/blog/2015/02/stripping-unwanted-architectures-from-dynamic-libraries-in-xcode/). We wanted you to still be able to use your app with the simulators, so we intentionally included these slices.
+See our [manual installation guide](/Manual Installation.md).
