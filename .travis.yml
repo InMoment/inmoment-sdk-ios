@@ -5,9 +5,9 @@ script: zip -r InMoment.framework.zip InMoment.framework
 
 deploy:
   - provider: releases
+    skip_cleanup: true
     api_key: $GH_TOKEN
     prerelease: true
     file: InMoment.framework.zip
-    skip_cleanup: true
     on:
       tags: true
