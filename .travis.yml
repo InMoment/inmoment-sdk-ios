@@ -12,6 +12,7 @@ deploy:
     on:
       tags: true
   - provider: script
+    skip_cleanup: true
     script: pod trunk push
     on:
       tags: true
