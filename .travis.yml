@@ -1,4 +1,3 @@
-language: objective-c
 osx_image: xcode8
 
 before_deploy: zip -r InMoment.framework.zip InMoment.framework
