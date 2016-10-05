@@ -1,14 +1,14 @@
 language: objective-c
 osx_image: xcode8
 
-before_deploy: zip -r InMoment.framework.zip InMoment.framework
+build: zip -r InMoment.framework.zip InMoment.framework
 
 deploy:
+  - skip_cleanup: true
   - provider: releases
     api_key: $GH_TOKEN
     prerelease: true
     file: InMoment.framework.zip
-    skip_cleanup: true
     on:
       tags: true
   - provider: script
