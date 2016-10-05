@@ -11,3 +11,7 @@ deploy:
     file: InMoment.framework.zip
     on:
       tags: true
+  - provider: script
+    script: pod trunk push
+    on:
+      tags: true
