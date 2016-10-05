@@ -1,0 +1,20 @@
+language: objective-c
+osx_image: xcode8
+
+rvm:
+  - 2.3
+  - cocoapods
+
+script: zip InMoment.framework.zip InMoment.framework
+
+deploy:
+  - provider: releases
+    api_key: $GH_TOKEN
+    file: InMoment.framework.zip
+    skip_cleanup: true
+    on:
+      tags: true
+  - provider: script
+    script: pod trunk push
+    on:
+      tags: true
