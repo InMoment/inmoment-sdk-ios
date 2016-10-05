@@ -1,4 +1,4 @@
-# InMoment SDK (iOS) (Beta)
+# InMoment SDK (iOS) (Beta) ![](https://travis-ci.org/InMoment/inmoment-sdk-ios.svg)
 InMoment is a simple framework giving client developers the ability to
 launch and interact with InMoment web surveys.
 **NOTE: This software is still in beta and is subject to change.**
