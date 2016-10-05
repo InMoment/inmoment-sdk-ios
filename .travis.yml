@@ -4,15 +4,10 @@ osx_image: xcode8
 script: zip -r InMoment.framework.zip InMoment.framework
 
 deploy:
-  - provider: releases
-    api_key: $GH_TOKEN
-    prerelease: true
-    file: InMoment.framework.zip
-    skip_cleanup: true
-    on:
-      tags: true
-  - provider: script
-    script: pod trunk push
-    skip_cleanup: true
-    on:
-      tags: true
+  provider: releases
+  api_key: $GH_TOKEN
+  prerelease: true
+  file: InMoment.framework.zip
+  skip_cleanup: true
+  on:
+    tags: true
