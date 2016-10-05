@@ -1,11 +1,7 @@
 language: objective-c
 osx_image: xcode8
 
-rvm:
-  - 2.3
-  - cocoapods
-
-script: zip InMoment.framework.zip InMoment.framework
+before_deploy: zip -r InMoment.framework.zip InMoment.framework
 
 deploy:
   - provider: releases
