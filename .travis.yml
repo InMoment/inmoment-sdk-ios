@@ -1,6 +1,8 @@
 language: objective-c
 osx_image: xcode8
 
+install: gem install cocoapods
+
 script: zip -r InMoment.framework.zip InMoment.framework
 
 deploy:
