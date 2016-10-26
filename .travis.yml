@@ -5,7 +5,7 @@ branches:
     - master
 
 before_install:
-  - echo "" > Rakefile
+  - echo "task :name" > Rakefile
 
 before_deploy:
   - gem install cocoapods
