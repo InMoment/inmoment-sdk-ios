@@ -1,4 +1,4 @@
-# InMoment SDK (iOS) (Beta) ![](https://travis-ci.org/InMoment/inmoment-sdk-ios.svg)
+# InMoment SDK (iOS) (Beta)
 InMoment is a simple framework giving client developers the ability to
 launch and interact with InMoment web surveys.
 **NOTE: This software is still in beta and is subject to change.**
@@ -11,7 +11,7 @@ launch and interact with InMoment web surveys.
 
 ## System Requirements
 
-- **Xcode 8** and **Swift 2.3**. Apps that include this framework may not build properly if newer or older versions of Xcode or Swift are used. For newer versions of Xcode/Swift, please use a newer version of this framework.
+- **Xcode 8** and **Swift 2.3**. Apps that include this framework may not build properly if newer or older versions of Xcode or Swift are used.
 - Apps must require **iOS 8.0** or later.
 
 ## Usage
@@ -85,15 +85,16 @@ optional func preferredWebSurveyLoadingViewStyle() -> LoadingViewStyle
 
 ### Installation via CocoaPods (Recommended)
 
-Just add the following line to your ```Podfile```:
+Add the following to your ```Podfile```:
 
 ```ruby
+use_frameworks!
 pod 'InMoment'
 ```
 
 ### Installation via Carthage
 
-1. Add the following line to your ```Cartfile```:
+1. Add the following to your ```Cartfile```:
 
 ```ruby
 github 'InMoment/inmoment-sdk-ios'
