@@ -5,6 +5,9 @@ branches:
   except:
     - master
 
+before_install:
+  - echo "" > Rakefile
+
 before_deploy:
   - gem install cocoapods
   - zip -r InMoment.framework.zip InMoment.framework
