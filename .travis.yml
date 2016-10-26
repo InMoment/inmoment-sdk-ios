@@ -1,10 +1,11 @@
-language: objective-c
+language: ruby
 
 branches:
   except:
     - master
 
 before_deploy:
+  - gem install cocoapods
   - zip -r InMoment.framework.zip InMoment.framework
 
 deploy:
