@@ -1,8 +1,6 @@
 language: objective-c
 osx_image: xcode8
 
-install: gem install cocoapods
-
 script: zip -r InMoment.framework.zip InMoment.framework
 
 deploy:
@@ -15,6 +13,6 @@ deploy:
       tags: true
   - provider: script
     skip_cleanup: true
-    script: pod trunk push
+    script: ./cocoapods.sh
     on:
       tags: true
