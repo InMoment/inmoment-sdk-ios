@@ -1,6 +1,12 @@
 language: objective-c
 osx_image: xcode8
 
+branches:
+  except:
+    - master
+
+install: true
+
 before_deploy:
   - zip -r InMoment.framework.zip InMoment.framework
 
