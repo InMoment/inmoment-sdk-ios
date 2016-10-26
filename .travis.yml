@@ -1,8 +1,12 @@
-language: generic
+language: ruby
+rvm: 2.2
 
 branches:
   except:
     - master
+
+before_install:
+  - echo "task :default do end" > Rakefile
 
 before_deploy:
   - gem install cocoapods
