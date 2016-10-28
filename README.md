@@ -11,7 +11,7 @@ launch and interact with InMoment web surveys.
 
 ## System Requirements
 
-- **Xcode 8** and **Swift 2.3**. Apps that include this framework may not build properly if newer or older versions of Xcode or Swift are used.
+- **Xcode 7.3.1** and **Swift 2.2**. Apps that include this framework may not build properly if newer or older versions of Xcode or Swift are used.
 - Apps must require **iOS 8.0** or later.
 
 ## Usage
