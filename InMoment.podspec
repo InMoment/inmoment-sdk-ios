@@ -2,7 +2,7 @@
 Pod::Spec.new do |s|
 
     s.name         = "InMoment"
-    s.version      = "0.4.106" # Automatically updated from Xcode project when 'fastlane deploy' is executed.
+    s.version      = "0.4.107" # Automatically updated from INMOMENT_VERSION environment variable or Xcode project when 'fastlane deploy' is executed.
     s.summary      = "Lauch and interact with InMoment web surveys."
 
     s.description  = <<-DESC
