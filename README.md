@@ -19,7 +19,7 @@ launch and interact with InMoment web surveys.
 ```swift
 import InMoment
 ```
-    
+
 ```swift
 class ViewController: UIViewController, InMomentSurveyDelegate {
 
@@ -27,21 +27,21 @@ class ViewController: UIViewController, InMomentSurveyDelegate {
         super.viewDidAppear(animated)
         InMoment.presentSurvey(gateway: "MySurveyGateway", delegate: self)
     }
-    
+
     func didRecieveErrorWhileLoadingSurvey(survey: InMomentSurvey, error: NSError) {
         //Insert your own code here. This method is required.
         survey.dismiss()
     }
-  
+
     func didArriveAtLastPageOfSurvey(survey: InMomentSurvey) {
         //Insert your own code here. This method is required.
         survey.dismiss()
     }
-    
+
     func didPassCompletionPointInSurvey(survey: InMomentSurvey) {
         //Insert your own code here. This method is optional.
     }
-  
+
 }
 ```
 
@@ -50,8 +50,8 @@ class ViewController: UIViewController, InMomentSurveyDelegate {
 ```swift
 //class InMoment
 public static func presentSurvey(gateway: String, 
-                                 parameters: [String:String] = [:],
-                                 delegate: InMomentSurveyDelegate)
+parameters: [String:String] = [:],
+delegate: InMomentSurveyDelegate)
 ```
 
 Calling this method presents a survey modally using the given ```presentationStyle```.
@@ -65,7 +65,7 @@ Calling this method presents a survey modally using the given ```presentationSty
 //protocol InMomentSurveyDelegate
 optional func didPassCompletionPointInSurvey(survey: InMomentSurvey)
 ```
-  
+
 This method is called when the user arrives at the page immediately following the survey completion point. Once this happens, the survey response will be available in InMoment reports and in Focus™, (even if the user doesn't continue until the very last page of the survey). Use this method to perform actions such as recording that the user has finished taking the survey or giving the user a reward.
 
 ### Customizing survey appearance
@@ -109,15 +109,15 @@ optional func preferredWebSurveyLoadingViewStyle() -> LoadingViewStyle
     ```bash
     /usr/local/bin/carthage copy-frameworks
     ```
-    
+
     and add the following line under ```Input Files```:
 
     ```bash
     $(SRCROOT)/Carthage/Build/iOS/InMoment.framework
     ```
-    
+
     This script works around an App Store submission bug triggered by universal binaries and ensures that necessary bitcode-related files and dSYMs are copied when archiving.
-    
+
 ### Manual Installation
 
 See our [manual installation guide](/Manual Installation.md).
