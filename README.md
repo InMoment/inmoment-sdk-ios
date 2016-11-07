@@ -83,27 +83,34 @@ optional func preferredWebSurveyLoadingViewStyle() -> LoadingViewStyle
 
 ## Installation
 
-### Installation via CocoaPods (Recommended)
+### CocoaPods (Recommended)
 
 Add the following to your ```Podfile```:
 
-```ruby
-use_frameworks!
-pod 'InMoment'
-```
+    ```ruby
+    use_frameworks!
+    pod 'InMoment', '~> 0.4'
+    ```
 
-### Installation via Carthage
+### Carthage
 
 1. Add the following to your ```Cartfile```:
 
-```ruby
-github 'InMoment/inmoment-sdk-ios'
-```
+    ```ruby
+    github 'InMoment/inmoment-sdk-ios' ~> 0.4
+    ```
 
 2. Run ```carthage bootstrap``` or ```carthage update```.
-3. You will be required to add the following frameworks to your Xcode project:
-    - ```InMoment.framework```
-    - ```Mixpanel.framework```
+3. On your app target's ```General``` settings tab, drag ```InMoment.framework``` from the ```Carthage/Build``` folder into the ```Embedded binaries``` section.
+4. On your app target's ```Build Phases``` settings tab, click the ```+``` icon and choose ```New Run Script Phase```. Create a Run Script in which your specify your shell (ex: ```bin/sh```), and add the following contents to the script area below the shell:
+    
+    ```/usr/local/bin/carthage copy-frameworks```
+
+    and add the following line under ```Input Files```:
+
+    ```$(SRCROOT)/Carthage/Build/iOS/InMoment.framework```
+
+    This script works around an App Store submission bug triggered by universal binaries and ensures that necessary bitcode-related files and dSYMs are copied when archiving.
     
 ### Manual Installation
 
