@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
     s.author       = { "InMoment, Inc." => "mobile-development@inmoment.com" }
     s.platform     = :ios, "8.0"
     
-    s.source       = { :git => "#{s.homepage}.git", :tag => s.version }
+    s.source       = { :git => "#{s.homepage}.git", :tag => "v#{s.version}" }
     s.documentation_url = s.homepage
     s.preserve_paths = "*.framework"
     s.vendored_frameworks  = "*.framework"
