@@ -88,8 +88,9 @@ optional func preferredWebSurveyLoadingViewStyle() -> LoadingViewStyle
 1. Add the following to your ```Podfile```:
 
     ```ruby
+    platform :ios, '8.0'
     use_frameworks!
-    pod 'InMoment', '~> 0.6.0'
+    pod 'InMoment', '~> 0.6.1'
     ```
 
 2. Run ```pod install``` or ```pod update```.
@@ -99,7 +100,7 @@ optional func preferredWebSurveyLoadingViewStyle() -> LoadingViewStyle
 1. Add the following to your ```Cartfile```:
 
     ```ruby
-    github 'InMoment/inmoment-sdk-ios' ~> 0.6.0
+    github 'InMoment/inmoment-sdk-ios' ~> 0.6.1
     ```
 
 2. Run ```carthage bootstrap``` or ```carthage update```.
