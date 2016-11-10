@@ -11,8 +11,8 @@ launch and interact with InMoment web surveys.
 
 ## System Requirements
 
-- **Xcode 8.1** and **Swift 3.0.1**. Apps that include this framework may not build properly if newer or older versions of Xcode or Swift are used.
-- Apps must require **iOS 8.0** or later. If you need to target Swift 2.2, please use one of our **0.4.x** releases.
+- **Xcode 8.1** and **Swift 3.0.1**. Apps that include this framework may not build properly if newer or older versions of Xcode or Swift are used. If you need to target Swift 2.2, please use one of our **0.4.x** releases.
+- Apps must require **iOS 8.0** or later.
 
 ## Usage
 
@@ -100,7 +100,7 @@ Failure to add these entries to your Info.plist will result in your app being re
     ```ruby
     platform :ios, '8.0'
     use_frameworks!
-    pod 'InMoment', '~> 0.6.2'
+    pod 'InMoment', '~> 0.6.3'
     ```
 
 2. Run `pod install` or `pod update`.
@@ -111,7 +111,7 @@ Failure to add these entries to your Info.plist will result in your app being re
 1. Add the following to your ```Cartfile```:
 
     ```ruby
-    github 'InMoment/inmoment-sdk-ios' ~> 0.6.2
+    github 'InMoment/inmoment-sdk-ios' ~> 0.6.3
     ```
 
 2. Run `carthage bootstrap` or `carthage update`.
