@@ -3,8 +3,7 @@
 1. [Download](https://www.github.com/InMoment/inmoment-sdk/releases/latest) and unzip the latest release.
 2. Drag `InMomentFeedbackKit.framework` into your Xcode project and choose "Copy if needed".
 3. Click the `+` in the `Embedded Binaries` section of your application's target, and select `InMomentFeedbackKit.framework`.
-4. Do the same for each of the framework's dependencies (listed in the Cartfile). You will have to visit the GitHub repo for each dependency and follow their download and installation instructions.
-5. Add a "Run Script" build phase after "Embed Frameworks". Copy and paste the following script:
+4. Add a "Run Script" build phase after "Embed Frameworks". Copy and paste the following script:
 
     ```bash
     APP_PATH="${TARGET_BUILD_DIR}/${WRAPPER_NAME}"
@@ -37,7 +36,7 @@
     done
     ```
 
-6. Don't forget to add the appropriate entries to your Info.plist (see "Privacy" in the [README](/README.md)).
+5. Don't forget to add the appropriate entries to your Info.plist (see "Privacy" in the [README](/README.md)).
 
 Credit: [Daniel Kennett](http://stackoverflow.com/users/29005/ikenndac). 
 This is a workaround for a bug in Xcode 7 that prevents users from uploading apps 
