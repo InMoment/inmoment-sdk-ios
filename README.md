@@ -50,8 +50,8 @@ class ViewController: UIViewController, InMomentSurveyDelegate {
 ```swift
 //class InMoment
 public static func presentSurvey(gateway: String, 
-parameters: [String:String] = [:],
-delegate: InMomentSurveyDelegate)
+                              parameters: [String:String] = [:],
+                                delegate: InMomentSurveyDelegate)
 ```
 
 Calling this method presents a survey modally using the given `presentationStyle`.
