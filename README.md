@@ -76,8 +76,9 @@ The following methods can be implemented to customize the appearance of the surv
 //protocol InMomentSurveyDelegate
 optional func preferredWebSurveyModalPresentationStyle() -> UIModalPresentationStyle
 optional func preferredWebSurveyNavigationBarStyle() -> UIBarStyle
-optional func preferredWebSurveyNavigationBarTintColor() -> UIColor
-optional func preferredWebSurveyProgressBarColor() -> UIColor
+optional func preferredWebSurveyNavigationBarColor() -> UIColor?
+optional func preferredWebSurveyNavigationBarTextColor() -> UIColor?
+optional func preferredWebSurveyProgressBarColor() -> UIColor?
 optional func preferredWebSurveyLoadingViewStyle() -> LoadingViewStyle
 ```
 
