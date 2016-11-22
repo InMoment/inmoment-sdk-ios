@@ -101,7 +101,7 @@ Failure to add these entries to your Info.plist will result in your app being re
     ```ruby
     platform :ios, '8.0'
     use_frameworks!
-    pod 'InMoment', '~> 0.6.3'
+    pod 'InMoment', '~> 0.7.0'
     ```
 
 2. Run `pod install` or `pod update`.
@@ -112,7 +112,7 @@ Failure to add these entries to your Info.plist will result in your app being re
 1. Add the following to your ```Cartfile```:
 
     ```ruby
-    github 'InMoment/inmoment-sdk-ios' ~> 0.6.3
+    github 'InMoment/inmoment-sdk-ios' ~> 0.7.0
     ```
 
 2. Run `carthage bootstrap` or `carthage update`.

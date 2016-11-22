@@ -138,8 +138,9 @@ SWIFT_CLASS("_TtC8InMoment8InMoment")
 
 SWIFT_PROTOCOL("_TtP8InMoment14InMomentSurvey_")
 @protocol InMomentSurvey
-- (void)dismiss;
 - (void)startOver;
+- (void)dismiss;
+- (void)dismissWithCompletion:(void (^ _Nullable)(void))completion;
 - (void)presentAlertWithTitle:(NSString * _Nullable)title message:(NSString * _Nullable)message buttonText:(NSString * _Nonnull)buttonText buttonAction:(void (^ _Nullable)(void))buttonAction;
 - (void)presentViewController:(UIViewController * _Nonnull)viewControllerToPresent animated:(BOOL)flag completion:(void (^ _Nullable)(void))completion;
 @end
@@ -155,7 +156,8 @@ SWIFT_PROTOCOL("_TtP8InMoment22InMomentSurveyDelegate_")
 - (void)didPassCompletionPointInSurvey:(id <InMomentSurvey> _Nonnull)survey;
 - (UIModalPresentationStyle)preferredWebSurveyModalPresentationStyle;
 - (UIBarStyle)preferredWebSurveyNavigationBarStyle;
-- (UIColor * _Nullable)preferredWebSurveyNavigationBarTintColor;
+- (UIColor * _Nullable)preferredWebSurveyNavigationBarColor;
+- (UIColor * _Nullable)preferredWebSurveyNavigationBarTextColor;
 - (UIColor * _Nullable)preferredWebSurveyProgressBarColor;
 - (enum LoadingViewStyle)preferredWebSurveyLoadingViewStyle;
 @end
