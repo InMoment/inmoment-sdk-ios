@@ -28,7 +28,7 @@ class ViewController: UIViewController, InMomentSurveyDelegate {
         InMoment.presentSurvey(gateway: "MySurveyGateway", delegate: self)
     }
 
-    func didRecieveErrorWhileLoadingSurvey(survey: InMomentSurvey, error: NSError) {
+    func didRecieveErrorWhileLoadingSurvey(survey: InMomentSurvey, error: Error) {
         //Insert your own code here. This method is required.
         survey.dismiss()
     }
@@ -101,7 +101,7 @@ Failure to add these entries to your Info.plist will result in your app being re
     ```ruby
     platform :ios, '8.0'
     use_frameworks!
-    pod 'InMoment', '~> 0.7.1'
+    pod 'InMoment', '~> 0.7.2'
     ```
 
 2. Run `pod install` or `pod update`.
@@ -112,7 +112,7 @@ Failure to add these entries to your Info.plist will result in your app being re
 1. Add the following to your ```Cartfile```:
 
     ```ruby
-    github 'InMoment/inmoment-sdk-ios' ~> 0.7.1
+    github 'InMoment/inmoment-sdk-ios' ~> 0.7.2
     ```
 
 2. Run `carthage bootstrap` or `carthage update`.
