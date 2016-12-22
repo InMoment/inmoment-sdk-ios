@@ -155,33 +155,6 @@ SWIFT_CLASS("_TtC8InMoment8InMoment")
 + (void)presentSurveyWithContext:(UIViewController * _Nonnull)context gateway:(NSString * _Nonnull)gateway parameters:(NSDictionary<NSString *, NSString *> * _Nonnull)parameters style:(SurveyStyle * _Nonnull)style;
 @end
 
-
-SWIFT_PROTOCOL("_TtP8InMoment14InMomentSurvey_")
-@protocol InMomentSurvey
-- (void)startOver;
-- (void)dismiss;
-- (void)dismissWithCompletion:(void (^ _Nullable)(void))completion;
-- (void)presentAlertWithTitle:(NSString * _Nullable)title message:(NSString * _Nullable)message buttonText:(NSString * _Nonnull)buttonText buttonAction:(void (^ _Nullable)(void))buttonAction;
-- (void)presentViewController:(UIViewController * _Nonnull)viewControllerToPresent animated:(BOOL)flag completion:(void (^ _Nullable)(void))completion;
-@end
-
-@class UIColor;
-enum LoadingViewStyle : NSInteger;
-
-SWIFT_PROTOCOL("_TtP8InMoment22InMomentSurveyDelegate_")
-@protocol InMomentSurveyDelegate
-- (void)didArriveAtLastPageOfSurvey:(id <InMomentSurvey> _Nonnull)survey;
-- (void)didRecieveErrorWhileLoadingSurvey:(id <InMomentSurvey> _Nonnull)survey error:(NSError * _Nonnull)error;
-@optional
-- (void)didPassCompletionPointInSurvey:(id <InMomentSurvey> _Nonnull)survey;
-- (UIModalPresentationStyle)preferredWebSurveyModalPresentationStyle;
-- (UIBarStyle)preferredWebSurveyNavigationBarStyle;
-- (UIColor * _Nullable)preferredWebSurveyNavigationBarColor;
-- (UIColor * _Nullable)preferredWebSurveyNavigationBarTextColor;
-- (UIColor * _Nullable)preferredWebSurveyProgressBarColor;
-- (enum LoadingViewStyle)preferredWebSurveyLoadingViewStyle;
-@end
-
 typedef SWIFT_ENUM(NSInteger, LoadingViewStyle) {
   LoadingViewStyleLightGreen = 0,
   LoadingViewStyleLightGray = 1,
@@ -220,6 +193,7 @@ SWIFT_PROTOCOL("_TtP8InMoment14SurveyListener_")
 - (void)onPassedCompletionPoint:(id <Survey> _Nonnull)survey;
 @end
 
+@class UIColor;
 
 SWIFT_CLASS("_TtC8InMoment11SurveyStyle")
 @interface SurveyStyle : NSObject

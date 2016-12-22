@@ -1,4 +1,9 @@
-# InMoment iOS SDK [![CocoaPods](https://img.shields.io/cocoapods/v/InMoment.svg)](https://cocoapods.org/pods/InMoment)
+# InMoment iOS SDK
+[![CocoaPods](https://img.shields.io/cocoapods/p/InMoment.svg)](https://cocoapods.org/pods/InMoment)
+[![CocoaPods](https://img.shields.io/cocoapods/v/InMoment.svg)](https://cocoapods.org/pods/InMoment)
+[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
+[![CocoaPods](https://img.shields.io/cocoapods/l/InMoment.svg)](https://cocoapods.org/pods/InMoment)
+
 `InMoment` is a simple framework giving client developers the ability to launch and interact with InMoment web surveys.
 
 ## Screenshots
