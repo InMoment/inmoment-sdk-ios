@@ -20,7 +20,7 @@ To use this library, a valid survey gateway must first be obtained from your InM
 
 Before any surveys may be presented, the SDK must be initialized with an instance of `SurveyListener`. Typically this is done by the `AppDelegate`, but can be done anywhere as long as it takes place before any calls to `presentSurvey`.
 
-To initialize the SDK, make the following modifications to your `AppDelegate`:
+To initialize the SDK, make the following modifications to your application's `AppDelegate`:
 
 ```swift
 import InMoment
@@ -61,10 +61,10 @@ public static func presentSurvey(context: UIViewController,
 ```
 
 Calling this method presents a survey modally using the given `style`.
-- parameter `context` (required): An instance of `UIViewController`. This view controller will act as a host for the survey view controller.
-- parameter `gateway` (required): A valid InMoment web survey gateway. Ask your CSM or TSM for details.
-- parameter `parameters` (optional): A dictionary of strings corresponding to any survey URL parameters.
-- parameter `style` (optional): An object of type `SurveyStyle`.
+- `context` (required): An instance of `UIViewController`. This view controller will act as a host for the survey view controller.
+- `gateway` (required): A valid InMoment web survey gateway. Ask your CSM or TSM for details.
+- `parameters` (optional): A dictionary of strings corresponding to any survey URL parameters.
+- `style` (optional): An object of type `SurveyStyle`.
 
 ### Useful Tools
 
@@ -83,6 +83,16 @@ optional func onPassedCompletionPoint(_ survey: Survey)
 
 This method is called when the user arrives at the page immediately following the survey completion point. Once this happens, the survey response will be available in InMoment reports and in Hub 2.0™, (even if the user doesn't continue until the very last page of the survey). Implement this method in your application's `SurveyListener` to perform actions such as recording that the user has finished taking the survey or giving the user a reward.
 
+Example usage:
+
+```swift
+func onPassedCompletionPoint(_ survey: Survey) {
+
+    myUsersAwesomeRewardPoints.increment(by: 100)
+
+}
+```
+
 ###### Second Method, Last Page:
 
 ```swift
@@ -91,6 +101,51 @@ optional func onArrivedAtLastPage(_ survey: Survey)
 ```
 
 This method is called when the user arrives at the last page of the survey. Implement this method in your application's `SurveyListener` to perform actions such as recording the redemption and finally dismissing the survey.
+
+Example usage:
+
+```swift
+func onArrivedAtLastPage(_ survey: Survey) {
+
+    var redemptionCode = survey.getRedemptionCode()
+    myUsersSavedRedemptionCodes.save(code: redemptionCode)
+
+    survey.createAlertDialog()
+        .setTitle("Thank you!")
+        .setMessage("Your feedback has been recorded")
+        .addButton("OK", preferred: true, onClick: { survey.dismiss() })
+        .show()
+
+}
+```
+
+#### Error Handling
+
+```swift
+//protocol SurveyListener
+func onReceivedError(_ survey: Survey, error: NSError)
+```
+
+This method is called when an error occurs while loading or during the survey. Implement this method in your application's `SurveyListener` to perform actions such as attempting to restart the survey or logging the error and finally dismissing the survey.
+
+Example usage:
+
+```swift
+func onReceivedError(_ survey: Survey, error: NSError) {
+    
+    NSLog(error.localizedDescription)
+    NSLog(error.localizedFailureReason ?? "")
+    NSLog(error.localizedRecoverySuggestion ?? "")
+
+    survey.createAlertDialog()
+        .setTitle("Oops!")
+        .setMessage("Something went wrong!")
+        .addButton("Try again", onClick: { survey.startOver() })
+        .addButton("Cancel", style: .destructive, preferred: true, onClick: { survey.dismiss() })
+        .show()
+
+}
+```
 
 #### Customizing Survey Appearance
 
@@ -126,7 +181,7 @@ Failure to add these entries to the application's `Info.plist` will result in th
     ```ruby
     platform :ios, '8.0'
     use_frameworks!
-    pod 'InMoment', '~> 0.8.0'
+    pod 'InMoment', '~> 0.8.1'
     ```
 
 2. Run `pod install` or `pod update`.
@@ -137,7 +192,7 @@ Failure to add these entries to the application's `Info.plist` will result in th
 1. Add the following to your ```Cartfile```:
 
     ```ruby
-    github 'InMoment/inmoment-sdk-ios' ~> 0.8.0
+    github 'InMoment/inmoment-sdk-ios' ~> 0.8.1
     ```
 
 2. Run `carthage bootstrap` or `carthage update`.
