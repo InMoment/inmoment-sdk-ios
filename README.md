@@ -14,7 +14,7 @@
 
 ## System Requirements
 
-- **Xcode 8.2.1** and **Swift 3.0.2**. Apps that include this framework may not build properly if newer or older versions of Xcode or Swift are used. If you need to target Swift 2.2, please use one of our **0.4.x** releases.
+- **Xcode 8.2.1** and **Swift 3.1**. Apps that include this framework may not build properly if newer or older versions of Xcode or Swift are used. If you need to target Seift 3.0.2, please use one of our 1.0.x releases. If you need to target Swift 2.2, please use one of our **0.4.x** releases.
 - Apps must require **iOS 8.0** or later.
 
 ## Usage
@@ -186,7 +186,7 @@ Failure to add these entries to the application's `Info.plist` will result in th
     ```ruby
     platform :ios, '8.0'
     use_frameworks!
-    pod 'InMoment', '~> 1.0.1'
+    pod 'InMoment', '~> 1.1.0'
     ```
 
 2. Run `pod install` or `pod update`.
@@ -197,7 +197,7 @@ Failure to add these entries to the application's `Info.plist` will result in th
 1. Add the following to your ```Cartfile```:
 
     ```ruby
-    github 'InMoment/inmoment-sdk-ios' ~> 1.0.1
+    github 'InMoment/inmoment-sdk-ios' ~> 1.1.0
     ```
 
 2. Run `carthage bootstrap` or `carthage update`.
