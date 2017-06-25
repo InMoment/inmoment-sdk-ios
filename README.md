@@ -92,9 +92,7 @@ Example usage:
 
 ```swift
 func onPassedCompletionPoint(_ survey: Survey) {
-
     myUsersAwesomeRewardPoints.increment(by: 100)
-
 }
 ```
 
@@ -111,16 +109,13 @@ Example usage:
 
 ```swift
 func onArrivedAtLastPage(_ survey: Survey) {
-
     var redemptionCode = survey.getRedemptionCode()
     myUsersSavedRedemptionCodes.save(code: redemptionCode)
-
     survey.createAlertDialog()
         .setTitle("Thank you!")
         .setMessage("Your feedback has been recorded")
         .addButton("OK", preferred: true, onClick: { survey.dismiss() })
         .show()
-
 }
 ```
 
@@ -137,18 +132,15 @@ Example usage:
 
 ```swift
 func onReceivedError(_ survey: Survey, error: NSError) {
-    
     NSLog(error.localizedDescription)
     NSLog(error.localizedFailureReason ?? "")
     NSLog(error.localizedRecoverySuggestion ?? "")
-
     survey.createAlertDialog()
         .setTitle("Oops!")
         .setMessage("Something went wrong!")
         .addButton("Try again", onClick: { survey.startOver() })
         .addButton("Cancel", style: .destructive, preferred: true, onClick: { survey.dismiss() })
         .show()
-
 }
 ```
 
@@ -186,7 +178,7 @@ Failure to add these entries to the application's `Info.plist` will result in th
     ```ruby
     platform :ios, '8.0'
     use_frameworks!
-    pod 'InMoment', '~> 1.1.0'
+    pod 'InMoment', '~> 1.1.1'
     ```
 
 2. Run `pod install` or `pod update`.
@@ -197,7 +189,7 @@ Failure to add these entries to the application's `Info.plist` will result in th
 1. Add the following to your ```Cartfile```:
 
     ```ruby
-    github 'InMoment/inmoment-sdk-ios' ~> 1.1.0
+    github 'InMoment/inmoment-sdk-ios' ~> 1.1.1
     ```
 
 2. Run `carthage bootstrap` or `carthage update`.
