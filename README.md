@@ -212,4 +212,4 @@ Failure to add these entries to the application's `Info.plist` will result in th
 
 ### Manual Installation
 
-See our [manual installation guide](/Manual Installation.md).
+See our [manual installation guide](Manual%20Installation.md).
