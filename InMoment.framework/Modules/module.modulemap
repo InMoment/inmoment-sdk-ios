@@ -7,4 +7,5 @@ framework module InMoment {
 
 module InMoment.Swift {
     header "InMoment-Swift.h"
+    requires objc
 }
