@@ -66,7 +66,7 @@ See our [manual installation guide](Manual%20Installation.md).
 
 To use this library, a valid survey gateway must first be obtained from your InMoment Client Success Manager (CSM) or Technical Success Manager (TSM). The following sections provide instructions to initialize the SDK and to present surveys. Useful tools for recording survey completion and error handling will also be discussed.
 
-### Initializing the SDK
+### Initialize the SDK
 
 Before any surveys may be presented, the SDK must be initialized with an instance of `SurveyListener`. Typically this is done by the `AppDelegate`, but can be done anywhere as long as it takes place before any calls to `presentSurvey`.
 
@@ -98,16 +98,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate, SurveyListener {
 }
 ```
 
-### Presenting a Survey
+### Present a Survey
 
 The following method of the `InMoment` class will present a survey.
 
 ```swift
-//class InMoment
-public static func presentSurvey(context: UIViewController,
-                                 gateway: String,
-                                 parameters: [String:String] = [:],
-                                 style: SurveyStyle = SurveyStyle())
+InMoment.presentSurvey(context: self, gateway: "MyGateway", parameters: ["Key":"Value"])
 ```
 
 Calling this method presents a survey modally using the given `style`.
@@ -120,16 +116,11 @@ Calling this method presents a survey modally using the given `style`.
 
 The following sections discuss some useful tools for manipulating and gleaning information from surveys.
 
-#### Recording Survey Completion
+#### Record Survey Completion
 
 There are two ways to record survey completion: once the user passes the **completion point** of the survey, and once the user arrives on the **last page** of the survey. The former is appropriate for determining when the survey response is considered "complete" according to the InMoment platform and will be available in reports. The latter is more appropriate for determining when no other survey pages exist, and for recording information like the survey's **redemption code**.
 
-###### First Method, Completion Point:
-
-```swift
-//protocol SurveyListener
-optional func onPassedCompletionPoint(_ survey: Survey)
-```
+###### After Passing the Completion Point:
 
 This method is called when the user arrives at the page immediately following the survey completion point. Once this happens, the survey response will be available in InMoment reports and in Hub 2.0™, (even if the user doesn't continue until the very last page of the survey). Implement this method in your application's `SurveyListener` to perform actions such as recording that the user has finished taking the survey or giving the user a reward.
 
@@ -141,12 +132,7 @@ func onPassedCompletionPoint(_ survey: Survey) {
 }
 ```
 
-###### Second Method, Last Page:
-
-```swift
-//protocol SurveyListener
-optional func onArrivedAtLastPage(_ survey: Survey)
-```
+###### Upon Arrival on Last Page:
 
 This method is called when the user arrives at the last page of the survey. Implement this method in your application's `SurveyListener` to perform actions such as recording the redemption and finally dismissing the survey.
 
@@ -164,16 +150,11 @@ func onArrivedAtLastPage(_ survey: Survey) {
 }
 ```
 
-#### Error Handling
-
-```swift
-//protocol SurveyListener
-func onReceivedError(_ survey: Survey, error: NSError)
-```
+#### Handle Errors
 
 This method is called when an error occurs while loading or during the survey. Implement this method in your application's `SurveyListener` to perform actions such as attempting to restart the survey or logging the error and finally dismissing the survey.
 
-Example usage:
+Example:
 
 ```swift
 func onReceivedError(_ survey: Survey, error: NSError) {
@@ -189,7 +170,7 @@ func onReceivedError(_ survey: Survey, error: NSError) {
 }
 ```
 
-#### Customizing Survey Appearance
+#### Customize the Survey's Appearance
 
 Passing an instance of `SurveyStyle` to `InMoment.presentSurvey()` will apply the desired stylistic effects to the survey view controller's navigation bar and progress bar.
 
