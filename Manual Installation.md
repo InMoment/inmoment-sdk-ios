@@ -1,8 +1,8 @@
 ## Manual Installation
 
-1. [Download](https://www.github.com/InMoment/inmoment-sdk/releases/latest) and unzip the latest release.
-2. Drag `InMomentFeedbackKit.framework` into your Xcode project and choose "Copy if needed".
-3. Click the `+` in the `Embedded Binaries` section of your application's target, and select `InMomentFeedbackKit.framework`.
+1. [Download](https://www.github.com/InMoment/inmoment-sdk-ios/releases/latest) and unzip the latest release.
+2. Drag `InMoment.framework` into your Xcode project and choose "Copy if needed".
+3. Click the `+` in the `Embedded Binaries` section of your application's target, and select `InMoment.framework`.
 4. Add a "Run Script" build phase after "Embed Frameworks". Copy and paste the following script:
 
     ```bash
@@ -39,6 +39,6 @@
 5. Don't forget to add the appropriate entries to your Info.plist (see "Privacy" in the [README](/README.md)).
 
 Credit: [Daniel Kennett](http://stackoverflow.com/users/29005/ikenndac). 
-This is a workaround for a bug in Xcode 7 that prevents users from uploading apps 
+This is a workaround for a ~~bug~~ feature in Xcode 7+ that prevents users from uploading apps 
 referencing frameworks that contain simulator slices to iTunes Connect 
 [(click here to learn more)](http://ikennd.ac/blog/2015/02/stripping-unwanted-architectures-from-dynamic-libraries-in-xcode/). We wanted you to still be able to use your app with the simulators, so we intentionally included these slices.
