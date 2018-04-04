@@ -21,23 +21,22 @@
 
 ### CocoaPods (Recommended)
 
-1. Add the following to your ```Podfile```:
+1. Add the appropriate entries to your application's Info.plist (see "Privacy").
+2. Add the following to your ```Podfile```:
 
 ```ruby
-platform :ios, '8.0'
 use_frameworks!
-pod 'InMoment', '~> 1.3.0'
+pod 'InMoment'
 ```
 
-2. Run `pod install` or `pod update`.
-3. Don't forget to add the appropriate entries to your Info.plist (see "Privacy").
+3. Run `pod install`.
 
 ### Carthage
 
 1. Add the following to your ```Cartfile```:
 
 ```ruby
-github 'InMoment/inmoment-sdk-ios' ~> 1.3.0
+github 'InMoment/inmoment-sdk-ios'
 ```
 
 2. Run `carthage bootstrap` or `carthage update`.
@@ -66,9 +65,23 @@ See our [manual installation guide](Manual%20Installation.md).
 
 To use this library, a valid survey gateway must first be obtained from your InMoment Client Success Manager (CSM) or Technical Success Manager (TSM). The following sections provide instructions to initialize the SDK and to present surveys. Useful tools for recording survey completion and error handling will also be discussed.
 
-### Initialize the SDK
+### Present a Survey
 
-Before any surveys may be presented, the SDK must be initialized with an instance of `SurveyListener`. Typically this is done by the `AppDelegate`, but can be done anywhere as long as it takes place before any calls to `presentSurvey`.
+Calling the following method of the `InMoment` class will present a survey.
+
+```swift
+InMoment.presentSurvey(context: self, gateway: "MyGateway", parameters: ["Key":"Value"])
+```
+
+Calling this method presents a survey modally using the given `style`.
+- `context` (required): An instance of `UIViewController`. This view controller will act as a host for the survey view controller.
+- `gateway` (required): A valid InMoment web survey gateway. Ask your CSM or TSM for details.
+- `parameters` (optional): A dictionary of strings corresponding to any survey URL parameters.
+- `style` (optional): An object of type `SurveyStyle`.
+
+### Using a SurveyListener
+
+If desired, the SDK may be initialized with an instance of `SurveyListener`. Typically this is done by the `AppDelegate`, but can be done anywhere as long as it takes place before any calls to `presentSurvey`.
 
 To initialize the SDK, make the following modifications to your application's `AppDelegate`:
 
@@ -84,11 +97,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate, SurveyListener {
     }
 
     func onReceivedError(_ survey: Survey, error: NSError) {
-        //Insert your own code here. This method is required.
+        //Insert your own code here. This method is optional.
     }
 
     func onArrivedAtLastPage(_ survey: Survey) {
-        //Insert your own code here. This method is required.
+        //Insert your own code here. This method is optional.
     }
 
     func onPassedCompletionPoint(_ survey: Survey) {
@@ -97,20 +110,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, SurveyListener {
 
 }
 ```
-
-### Present a Survey
-
-The following method of the `InMoment` class will present a survey.
-
-```swift
-InMoment.presentSurvey(context: self, gateway: "MyGateway", parameters: ["Key":"Value"])
-```
-
-Calling this method presents a survey modally using the given `style`.
-- `context` (required): An instance of `UIViewController`. This view controller will act as a host for the survey view controller.
-- `gateway` (required): A valid InMoment web survey gateway. Ask your CSM or TSM for details.
-- `parameters` (optional): A dictionary of strings corresponding to any survey URL parameters.
-- `style` (optional): An object of type `SurveyStyle`.
 
 ### Useful Tools
 
